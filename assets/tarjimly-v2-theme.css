@@ -705,9 +705,9 @@ body.tj2 {
 .tj2-org-chip .mark {
   width: 34px;
   height: 34px;
-  border-radius: 9px;
-  background: var(--navy-soft);
-  color: var(--core-blue);
+  border-radius: 999px;
+  background: var(--core-blue);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -784,6 +784,7 @@ body.tj2 {
 .tj2-nav li a.active {
   background: var(--navy-soft);
   color: var(--core-blue);
+  font-weight: 800;
 }
 
 .tj2-nav li a .fa-fw {
