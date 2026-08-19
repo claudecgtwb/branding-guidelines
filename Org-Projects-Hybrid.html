@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/tarjimly-v2-theme.css">
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">Refugee Aid NGO</div><div class="sub">Organization · Admin</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label">Tarjimly</div>
+    <ul class="tj2-nav">
+      <li><a href="#"><i class="fa-solid fa-language fa-fw"></i> Text translations</a></li>
+      <li><a href="#"><i class="fa-solid fa-phone fa-fw"></i> Call interpreters</a></li>
+      <li><a href="#"><i class="fa-solid fa-file-invoice-dollar fa-fw"></i> Billing</a></li>
+      <li><a href="#"><i class="fa-solid fa-users fa-fw"></i> Manage users</a></li>
+    </ul>
+
+    <div class="tj2-nav-label">TWB Platform</div>
+    <ul class="tj2-nav">
+      <li><a href="Dashboard-Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="Organization-Hybrid.html"><i class="fa-solid fa-building fa-fw"></i> Organization</a></li>
+      <li><a href="#" class="active"><i class="fa-solid fa-diagram-project fa-fw"></i> Projects <span class="count">4</span></a></li>
+      <li><a href="News-List-Hybrid.html"><i class="fa-solid fa-newspaper fa-fw"></i> News &amp; updates <span class="count">2</span></a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning center</a></li>
+    </ul>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Samira Al-Ahmad</div><div class="email">samira@refugeeaid.org</div></div>
+      </div>
+      <a href="Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+      <div class="tj2-page-head">
+        <div>
+          <h1 class="tj2-h1">Projects</h1>
+          <p style="color:var(--grey-700);font-size:13px;margin-top:4px;">Refugee Aid NGO · 12 active · 3 pending deadline this week</p>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <a href="#" class="tj2-btn tj2-btn-outline"><i class="fa-solid fa-file-circle-plus"></i> New non-Phrase project</a>
+          <a href="Org-Project-Create-Hybrid.html" class="tj2-btn tj2-btn-accent"><i class="fa-solid fa-plus"></i> New project</a>
+        </div>
+      </div>
+
+      <div class="tj2-card" style="padding:12px 16px;margin-bottom:18px;">
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+          <div style="flex:1;min-width:220px;position:relative;">
+            <i class="fa-solid fa-magnifying-glass" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--grey-300);font-size:12px;"></i>
+            <input style="width:100%;padding:9px 12px 9px 32px;border:1.5px solid var(--grey-100);border-radius:8px;font-family:inherit;font-size:13px;" placeholder="Search projects by title or reference…">
+          </div>
+          <select style="padding:9px 12px;border:1.5px solid var(--grey-100);border-radius:8px;font-family:inherit;font-size:13px;">
+            <option>All statuses</option><option>In progress</option><option>Near complete</option><option>Complete</option><option>Overdue</option>
+          </select>
+          <select style="padding:9px 12px;border:1.5px solid var(--grey-100);border-radius:8px;font-family:inherit;font-size:13px;">
+            <option>All language pairs</option><option>EN → AR</option><option>EN → SW</option><option>FR → HA</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tj2-card" style="padding:0;overflow:hidden;">
+        <table style="width:100%;border-collapse:collapse;font-size:13.5px;">
+          <thead>
+            <tr style="text-align:left;">
+              <th style="width:34px;"></th>
+              <th style="padding:12px 14px;font-size:11px;text-transform:uppercase;color:var(--grey-700);border-bottom:1.5px solid var(--grey-100);">Project</th>
+              <th style="padding:12px 14px;font-size:11px;text-transform:uppercase;color:var(--grey-700);border-bottom:1.5px solid var(--grey-100);width:130px;">Progress</th>
+              <th style="padding:12px 14px;font-size:11px;text-transform:uppercase;color:var(--grey-700);border-bottom:1.5px solid var(--grey-100);width:190px;">Created → Due</th>
+              <th style="padding:12px 14px;font-size:11px;text-transform:uppercase;color:var(--grey-700);border-bottom:1.5px solid var(--grey-100);">Target languages</th>
+              <th style="padding:12px 14px;font-size:11px;text-transform:uppercase;color:var(--grey-700);border-bottom:1.5px solid var(--grey-100);width:50px;"></th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr style="cursor:pointer;" onclick="tjToggle('p1')">
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);color:var(--grey-700);"><i class="fa-solid fa-chevron-right tj2-chevron" id="chev-p1"></i></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><a href="Org-Project-View-Hybrid.html" onclick="event.stopPropagation()" style="font-weight:700;color:var(--dark-mariam);">Community Health Guidance — Flood Response</a></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><div style="display:flex;align-items:center;gap:8px;"><div class="tj2-progress" style="max-width:80px;height:14px;"><span style="width:82%"></span></div><span style="font-size:12px;font-weight:700;color:var(--success);">82%</span></div></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);font-size:12.5px;color:var(--grey-700);">Jun 23, 2026 → Jul 10, 2026</td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><div style="display:flex;gap:5px;flex-wrap:wrap;"><span class="tj2-lang-box">ar-SA</span><span class="tj2-lang-box">fr-FR</span><span class="tj2-lang-box">es-419</span><span class="tj2-lang-box">zh-HANS</span></div></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);" onclick="event.stopPropagation()"><a href="Org-Project-Edit-Hybrid.html" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-pen"></i></a></td>
+            </tr>
+            <tr id="p1" style="display:none;">
+              <td style="border-bottom:1px solid var(--grey-100);"></td>
+              <td colspan="5" style="padding:0 14px 16px;border-bottom:1px solid var(--grey-100);">
+                <div style="background:var(--light-mariam);border-radius:8px;padding:6px 14px;">
+                  <div style="display:flex;align-items:center;padding:10px 0;border-bottom:1px solid var(--grey-100);gap:14px;">
+                    <div style="flex:0 0 260px;font-size:12.5px;color:var(--grey-700);">Risk-Anaphylaxis2024 English L-R.docx</div>
+                    <div style="flex:0 0 90px;font-size:12.5px;color:var(--grey-700);">1,134 words</div>
+                    <div style="flex:1;display:flex;gap:5px;flex-wrap:wrap;">
+                      <span class="tj2-lang-box">fr-FR <i class="fa-solid fa-arrow-down" style="font-size:9px;"></i></span>
+                      <span class="tj2-lang-box">gu-IN <i class="fa-solid fa-arrow-down" style="font-size:9px;"></i></span>
+                      <span class="tj2-lang-box">es-419</span>
+                      <span class="tj2-lang-box">ar-SA</span>
+                    </div>
+                  </div>
+                  <div style="display:flex;align-items:center;padding:10px 0;gap:14px;">
+                    <div style="flex:0 0 260px;font-size:12.5px;color:var(--grey-700);">Risk-Anaphylaxis2024 English R-L.docx</div>
+                    <div style="flex:0 0 90px;font-size:12.5px;color:var(--grey-700);">1,134 words</div>
+                    <div style="flex:1;display:flex;gap:5px;flex-wrap:wrap;">
+                      <span class="tj2-lang-box">zh-HANS <i class="fa-solid fa-arrow-down" style="font-size:9px;"></i></span>
+                      <span class="tj2-lang-box">fa-IR</span>
+                      <span class="tj2-lang-box">ur-PK <i class="fa-solid fa-arrow-down" style="font-size:9px;"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="tjToggle('p2')">
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);color:var(--grey-700);"><i class="fa-solid fa-chevron-right tj2-chevron" id="chev-p2"></i></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><a href="Org-Project-View-Hybrid.html" onclick="event.stopPropagation()" style="font-weight:700;color:var(--dark-mariam);">Refugee Onboarding Handbook v3</a></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><div style="display:flex;align-items:center;gap:8px;"><div class="tj2-progress" style="max-width:80px;height:14px;"><span style="width:41%;background:var(--twb-accent);"></span></div><span style="font-size:12px;font-weight:700;color:var(--twb-accent-dark);">41%</span></div></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);font-size:12.5px;color:var(--grey-700);">Jun 18, 2026 → Jul 17, 2026</td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><div style="display:flex;gap:5px;flex-wrap:wrap;"><span class="tj2-lang-box">sw-KE</span><span class="tj2-lang-box">fr-FR</span></div></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);" onclick="event.stopPropagation()"><a href="Org-Project-Edit-Hybrid.html" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-pen"></i></a></td>
+            </tr>
+            <tr id="p2" style="display:none;">
+              <td style="border-bottom:1px solid var(--grey-100);"></td>
+              <td colspan="5" style="padding:0 14px 16px;border-bottom:1px solid var(--grey-100);">
+                <div style="background:var(--light-mariam);border-radius:8px;padding:6px 14px;">
+                  <div style="display:flex;align-items:center;padding:10px 0;gap:14px;">
+                    <div style="flex:0 0 260px;font-size:12.5px;color:var(--grey-700);">handbook_intro.docx</div>
+                    <div style="flex:0 0 90px;font-size:12.5px;color:var(--grey-700);">2,140 words</div>
+                    <div style="flex:1;display:flex;gap:5px;flex-wrap:wrap;">
+                      <span class="tj2-lang-box">sw-KE <i class="fa-solid fa-arrow-down" style="font-size:9px;"></i></span>
+                      <span class="tj2-lang-box">fr-FR</span>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="tjToggle('p3')">
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);color:var(--grey-700);"><i class="fa-solid fa-chevron-right tj2-chevron" id="chev-p3"></i></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><a href="Org-Project-View-Hybrid.html" onclick="event.stopPropagation()" style="font-weight:700;color:var(--dark-mariam);">Cash Assistance FAQ — Round 4</a></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><div style="display:flex;align-items:center;gap:8px;"><div class="tj2-progress" style="max-width:80px;height:14px;"><span style="width:100%"></span></div><span style="font-size:12px;font-weight:700;color:var(--success);">100%</span></div></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);font-size:12.5px;color:var(--grey-700);">May 30, 2026 → Jul 05, 2026</td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><div style="display:flex;gap:5px;flex-wrap:wrap;"><span class="tj2-lang-box">ha-NG</span></div></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);" onclick="event.stopPropagation()"><a href="Org-Project-Edit-Hybrid.html" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-pen"></i></a></td>
+            </tr>
+            <tr id="p3" style="display:none;">
+              <td></td>
+              <td colspan="5" style="padding:0 14px 16px;">
+                <div style="background:var(--light-mariam);border-radius:8px;padding:6px 14px;">
+                  <div style="display:flex;align-items:center;padding:10px 0;gap:14px;">
+                    <div style="flex:0 0 260px;font-size:12.5px;color:var(--grey-700);">faq_bulletin_final.docx</div>
+                    <div style="flex:0 0 90px;font-size:12.5px;color:var(--grey-700);">2,900 words</div>
+                    <div style="flex:1;display:flex;gap:5px;flex-wrap:wrap;">
+                      <span class="tj2-lang-box">ha-NG <i class="fa-solid fa-arrow-down" style="font-size:9px;"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="tjToggle('p4')">
+              <td style="padding:14px;color:var(--grey-700);"><i class="fa-solid fa-chevron-right tj2-chevron" id="chev-p4"></i></td>
+              <td style="padding:14px;"><a href="Org-Project-View-Hybrid.html" onclick="event.stopPropagation()" style="font-weight:700;color:var(--dark-mariam);">School Reopening Announcement</a></td>
+              <td style="padding:14px;"><div style="display:flex;align-items:center;gap:8px;"><div class="tj2-progress" style="max-width:80px;height:14px;"><span style="width:8%;background:var(--danger);"></span></div><span style="font-size:12px;font-weight:700;color:var(--danger);">8%</span></div></td>
+              <td style="padding:14px;font-size:12.5px;color:var(--grey-700);">Jul 12, 2026 → Aug 01, 2026</td>
+              <td style="padding:14px;"><div style="display:flex;gap:5px;flex-wrap:wrap;"><span class="tj2-lang-box">ar-SA</span></div></td>
+              <td style="padding:14px;" onclick="event.stopPropagation()"><a href="Org-Project-Edit-Hybrid.html" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-pen"></i></a></td>
+            </tr>
+            <tr id="p4" style="display:none;">
+              <td></td>
+              <td colspan="5" style="padding:0 14px 16px;">
+                <div style="background:var(--light-mariam);border-radius:8px;padding:6px 14px;">
+                  <div style="display:flex;align-items:center;padding:10px 0;gap:14px;">
+                    <div style="flex:0 0 260px;font-size:12.5px;color:var(--grey-700);">school_reopening_notice.docx</div>
+                    <div style="flex:0 0 90px;font-size:12.5px;color:var(--grey-700);">1,400 words</div>
+                    <div style="flex:1;display:flex;gap:5px;flex-wrap:wrap;">
+                      <span class="tj2-lang-box">ar-SA</span>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <style>
+        .tj2-chevron { transition: transform .15s ease; }
+        .tj2-chevron.open { transform: rotate(90deg); color: var(--core-blue); }
+      </style>
+      <script>
+        function tjToggle(id) {
+          const row = document.getElementById(id);
+          const chev = document.getElementById('chev-' + id);
+          const open = row.style.display !== 'none';
+          row.style.display = open ? 'none' : 'table-row';
+          chev.classList.toggle('open', !open);
+        }
+      </script>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:13px;color:var(--grey-700);">
+        <span>Showing 4 of 12 projects</span>
+        <div style="display:flex;gap:6px;">
+          <button class="tj2-btn tj2-btn-outline tj2-btn-sm" disabled><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="tj2-btn tj2-btn-navy tj2-btn-sm">1</button>
+          <button class="tj2-btn tj2-btn-outline tj2-btn-sm">2</button>
+          <button class="tj2-btn tj2-btn-outline tj2-btn-sm">3</button>
+          <button class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+</script>
+</body>
+</html>

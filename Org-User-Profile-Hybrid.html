@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yusuf Khalil · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/tarjimly-v2-theme.css">
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">Refugee Aid NGO</div><div class="sub">Organization · Admin</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label">Tarjimly</div>
+    <ul class="tj2-nav">
+      <li><a href="#"><i class="fa-solid fa-language fa-fw"></i> Text translations</a></li>
+      <li><a href="#"><i class="fa-solid fa-phone fa-fw"></i> Call interpreters</a></li>
+      <li><a href="#"><i class="fa-solid fa-file-invoice-dollar fa-fw"></i> Billing</a></li>
+      <li><a href="#"><i class="fa-solid fa-users fa-fw"></i> Manage users</a></li>
+    </ul>
+
+    <div class="tj2-nav-label">TWB Platform</div>
+    <ul class="tj2-nav">
+      <li><a href="Dashboard-Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="Organization-Hybrid.html" class="active"><i class="fa-solid fa-building fa-fw"></i> Organization</a></li>
+      <li><a href="Org-Projects-Hybrid.html"><i class="fa-solid fa-diagram-project fa-fw"></i> Projects <span class="count">4</span></a></li>
+      <li><a href="News-List-Hybrid.html"><i class="fa-solid fa-newspaper fa-fw"></i> News &amp; updates <span class="count">2</span></a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning center</a></li>
+    </ul>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Samira Al-Ahmad</div><div class="email">samira@refugeeaid.org</div></div>
+      </div>
+      <a href="Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content" style="max-width:780px;">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <div style="font-size:12.5px;color:var(--grey-700);margin-bottom:12px;">
+        <a href="Organization-Hybrid.html" style="color:var(--grey-700);">Organization</a> <i class="fa-solid fa-chevron-right" style="font-size:9px;margin:0 4px;"></i>
+        <span style="color:var(--dark-mariam);font-weight:600;">Member profile</span>
+      </div>
+
+      <!-- Header -->
+      <div class="tj2-card tj2-card-accent" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+        <img class="tj2-avatar" style="width:64px;height:64px;" src="https://www.gravatar.com/avatar/3?d=identicon&s=128" alt="">
+        <div style="flex:1;min-width:200px;">
+          <div style="font-size:19px;font-weight:800;color:var(--dark-mariam);">Yusuf Khalil</div>
+          <a href="mailto:yusuf.k+linguist@refugeeaid.org" style="font-size:13px;">yusuf.k+linguist@refugeeaid.org</a>
+        </div>
+        <span class="tj2-badge-soft" style="font-size:12px;padding:6px 14px;">Linguist</span>
+      </div>
+
+      <!-- Language pairs -->
+      <div class="tj2-card">
+        <div class="tj2-card-head"><h2 style="font-size:16px;">Language pairs</h2></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span class="tj2-lang-box">EN → SW <span style="color:var(--grey-700);font-weight:400;">(Level 2)</span></span>
+          <span class="tj2-lang-box">EN → AR <span style="color:var(--grey-700);font-weight:400;">(Level 1)</span></span>
+        </div>
+      </div>
+
+      <!-- Tasks for this organization -->
+      <div class="tj2-card" style="padding:0;overflow:hidden;">
+        <div class="tj2-card-head" style="padding:20px 22px 0;border-bottom:none;">
+          <h2 style="font-size:16px;">Tasks for Refugee Aid NGO</h2>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13.5px;">
+          <thead>
+            <tr>
+              <th style="text-align:left;padding:10px 22px;font-size:11px;text-transform:uppercase;color:var(--grey-700);border-bottom:1.5px solid var(--grey-100);">Task</th>
+              <th style="text-align:left;padding:10px 14px;font-size:11px;text-transform:uppercase;color:var(--grey-700);border-bottom:1.5px solid var(--grey-100);">Type</th>
+              <th style="text-align:left;padding:10px 14px;font-size:11px;text-transform:uppercase;color:var(--grey-700);border-bottom:1.5px solid var(--grey-100);">Status</th>
+              <th style="text-align:left;padding:10px 22px;font-size:11px;text-transform:uppercase;color:var(--grey-700);border-bottom:1.5px solid var(--grey-100);">Words</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tj2-row-link" style="cursor:pointer;" onclick="window.location='Org-Task-Hybrid.html'">
+              <td style="padding:14px 22px;border-bottom:1px solid var(--grey-100);"><a href="Org-Task-Hybrid.html">rights_and_services.docx</a></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><span style="color:var(--core-blue);font-weight:700;font-size:12.5px;">Translation</span></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><span class="tj2-badge" style="background:#fef4e2;color:var(--twb-accent-dark);"><i class="fa-solid fa-spinner"></i> In progress</span></td>
+              <td style="padding:14px 22px;border-bottom:1px solid var(--grey-100);">5,240</td>
+            </tr>
+            <tr class="tj2-row-link" style="cursor:pointer;" onclick="window.location='Org-Task-Hybrid.html'">
+              <td style="padding:14px 22px;border-bottom:1px solid var(--grey-100);"><a href="Org-Task-Hybrid.html">handbook_intro.docx</a></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><span style="color:var(--core-blue);font-weight:700;font-size:12.5px;">Translation</span></td>
+              <td style="padding:14px;border-bottom:1px solid var(--grey-100);"><span class="tj2-badge" style="background:#e9f7e8;color:var(--success);"><i class="fa-solid fa-check"></i> Complete</span></td>
+              <td style="padding:14px 22px;border-bottom:1px solid var(--grey-100);">2,140</td>
+            </tr>
+            <tr class="tj2-row-link" style="cursor:pointer;" onclick="window.location='Org-Task-Hybrid.html'">
+              <td style="padding:14px 22px;"><a href="Org-Task-Hybrid.html">flood_response_bulletin_01.docx</a></td>
+              <td style="padding:14px;"><span style="color:var(--core-blue);font-weight:700;font-size:12.5px;">Translation</span></td>
+              <td style="padding:14px;"><span class="tj2-badge" style="background:#e9f7e8;color:var(--success);"><i class="fa-solid fa-check"></i> Complete</span></td>
+              <td style="padding:14px 22px;">3,200</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+</script>
+</body>
+</html>

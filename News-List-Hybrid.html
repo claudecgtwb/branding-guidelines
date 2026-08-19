@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News Archive · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/tarjimly-v2-theme.css">
+<style>
+.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.news-card { background: #fff; border: 1px solid var(--grey-100); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.news-thumb { aspect-ratio: 3/2; background: var(--light-mariam); display: flex; align-items: center; justify-content: center; color: var(--grey-300); font-size: 30px; }
+.news-body { padding: 18px; flex: 1; display: flex; flex-direction: column; }
+.news-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.news-title { font-size: 15px; font-weight: 800; color: var(--dark-mariam); line-height: 1.35; margin-bottom: 8px; }
+.news-snippet { font-size: 12.5px; color: var(--grey-700); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; flex: 1; }
+.news-footer { padding: 0 18px 18px; }
+@media (max-width: 980px) { .news-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 620px) { .news-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">Refugee Aid NGO</div><div class="sub">Organization · Admin</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label">Tarjimly</div>
+    <ul class="tj2-nav">
+      <li><a href="#"><i class="fa-solid fa-language fa-fw"></i> Text translations</a></li>
+      <li><a href="#"><i class="fa-solid fa-phone fa-fw"></i> Call interpreters</a></li>
+      <li><a href="#"><i class="fa-solid fa-file-invoice-dollar fa-fw"></i> Billing</a></li>
+      <li><a href="#"><i class="fa-solid fa-users fa-fw"></i> Manage users</a></li>
+    </ul>
+
+    <div class="tj2-nav-label">TWB Platform</div>
+    <ul class="tj2-nav">
+      <li><a href="Dashboard-Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="Organization-Hybrid.html"><i class="fa-solid fa-building fa-fw"></i> Organization</a></li>
+      <li><a href="Org-Projects-Hybrid.html"><i class="fa-solid fa-diagram-project fa-fw"></i> Projects <span class="count">4</span></a></li>
+      <li><a href="#" class="active"><i class="fa-solid fa-newspaper fa-fw"></i> News &amp; updates <span class="count">2</span></a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning center</a></li>
+    </ul>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Samira Al-Ahmad</div><div class="email">samira@refugeeaid.org</div></div>
+      </div>
+      <a href="Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <a href="Dashboard-Home-Hybrid.html" style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:13px;margin-bottom:14px;"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</a>
+
+      <h1 class="tj2-h1" style="margin-bottom:22px;">News Archive (All Articles)</h1>
+
+      <div class="news-grid">
+
+        <div class="news-card">
+          <a href="News-Display-Hybrid.html"><div class="news-thumb"><i class="fa-regular fa-newspaper"></i></div></a>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Article</span>
+              <span style="font-size:11.5px;color:var(--grey-700);">Updated: Jul 10, 2026</span>
+            </div>
+            <a href="News-Display-Hybrid.html" class="news-title">TWB launches new terminology hub for health translators</a>
+            <p class="news-snippet">A searchable, community-vetted terminology database covering maternal health, epidemic response, and mental health support — built with input from over 200 volunteer linguists.</p>
+          </div>
+          <div class="news-footer"><a href="News-Display-Hybrid.html" style="font-weight:700;font-size:12.5px;">Read Article →</a></div>
+        </div>
+
+        <div class="news-card">
+          <a href="News-Display-Hybrid.html"><div class="news-thumb" style="color:#f6d9a8;"><i class="fa-regular fa-lightbulb"></i></div></a>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="tj2-badge" style="background:var(--twb-accent);color:#fff;">Event</span>
+              <span style="font-size:11.5px;color:var(--grey-700);">Updated: Jul 03, 2026</span>
+            </div>
+            <a href="News-Display-Hybrid.html" class="news-title">Tips for translating emergency alerts under deadline pressure</a>
+            <p class="news-snippet">Join our live workshop on producing accurate, fast turnarounds for crisis communications without sacrificing quality — includes a Q&amp;A with TWB's rapid response team.</p>
+          </div>
+          <div class="news-footer"><a href="News-Display-Hybrid.html" style="font-weight:700;font-size:12.5px;">Read Article →</a></div>
+        </div>
+
+        <div class="news-card">
+          <a href="News-Display-Hybrid.html"><div class="news-thumb"><i class="fa-solid fa-chart-simple"></i></div></a>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="tj2-badge" style="background:#29528d;color:#fff;">Report</span>
+              <span style="font-size:11.5px;color:var(--grey-700);">Updated: Jun 28, 2026</span>
+            </div>
+            <a href="News-Display-Hybrid.html" class="news-title">2026 Q2 impact report is now available</a>
+            <p class="news-snippet">A look at word counts translated, languages served, and partner organizations supported this quarter, plus a preview of what's ahead for the rest of the year.</p>
+          </div>
+          <div class="news-footer"><a href="News-Display-Hybrid.html" style="font-weight:700;font-size:12.5px;">Read Article →</a></div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+</script>
+</body>
+</html>

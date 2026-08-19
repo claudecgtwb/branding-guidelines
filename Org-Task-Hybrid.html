@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Task · rights_and_services.docx · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/tarjimly-v2-theme.css">
+<style>
+.stage-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px; }
+.stage-pill { border: 1px solid var(--grey-100); border-radius: 10px; padding: 14px 16px; background: #fff; }
+.stage-pill.active { background: #eaf0fa; border-color: #c7d7f0; }
+.stage-title { font-weight: 700; font-size: 13px; }
+.stage-meta { font-size: 12px; color: var(--grey-700); margin-top: 4px; }
+.stage-checklist { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; font-size: 12px; }
+.stage-checklist .done { color: var(--success); }
+.stage-checklist .pending { color: var(--grey-700); }
+.keyrow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 18px 0; }
+.keyrow .k { display: flex; gap: 12px; align-items: center; background: #fff; border: 1px solid var(--grey-100); border-radius: 10px; padding: 14px 16px; }
+.keyrow .k .ico { width: 34px; height: 34px; border-radius: 8px; background: var(--light-mariam); color: var(--core-blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.keyrow .k .label { font-size: 11px; color: var(--grey-700); text-transform: uppercase; font-weight: 700; }
+.keyrow .k .value { font-size: 13.5px; font-weight: 700; margin-top: 2px; }
+.accordion-hdr { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; cursor: pointer; font-weight: 700; font-size: 14.5px; }
+.accordion-hdr i.chev { transition: transform .15s ease; color: var(--grey-700); }
+.accordion-hdr.open i.chev { transform: rotate(180deg); }
+.accordion-body { padding: 0 20px 20px; }
+@media (max-width: 900px) { .stage-row, .keyrow { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">Refugee Aid NGO</div><div class="sub">Organization · Admin</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label">Tarjimly</div>
+    <ul class="tj2-nav">
+      <li><a href="#"><i class="fa-solid fa-language fa-fw"></i> Text translations</a></li>
+      <li><a href="#"><i class="fa-solid fa-phone fa-fw"></i> Call interpreters</a></li>
+      <li><a href="#"><i class="fa-solid fa-file-invoice-dollar fa-fw"></i> Billing</a></li>
+      <li><a href="#"><i class="fa-solid fa-users fa-fw"></i> Manage users</a></li>
+    </ul>
+
+    <div class="tj2-nav-label">TWB Platform</div>
+    <ul class="tj2-nav">
+      <li><a href="Dashboard-Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="Organization-Hybrid.html"><i class="fa-solid fa-building fa-fw"></i> Organization</a></li>
+      <li><a href="Org-Projects-Hybrid.html" class="active"><i class="fa-solid fa-diagram-project fa-fw"></i> Projects <span class="count">4</span></a></li>
+      <li><a href="News-List-Hybrid.html"><i class="fa-solid fa-newspaper fa-fw"></i> News &amp; updates <span class="count">2</span></a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning center</a></li>
+    </ul>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Samira Al-Ahmad</div><div class="email">samira@refugeeaid.org</div></div>
+      </div>
+      <a href="Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <!-- Header card -->
+      <div class="tj2-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;">
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <a href="Organization-Hybrid.html">
+              <div style="width:56px;height:56px;border-radius:50%;background:var(--light-mariam);display:flex;align-items:center;justify-content:center;color:var(--core-blue);flex-shrink:0;">
+                <i class="fa-solid fa-building" style="font-size:20px;"></i>
+              </div>
+            </a>
+            <div>
+              <div><a href="Organization-Hybrid.html" style="font-size:12px;color:var(--grey-700);">Refugee Aid NGO</a></div>
+              <div><a href="Org-Project-View-Hybrid.html" style="font-size:18px;font-weight:800;color:var(--core-blue);">Refugee Onboarding Handbook v3</a></div>
+              <div style="display:flex;align-items:center;gap:8px;margin-top:4px;flex-wrap:wrap;">
+                <span style="font-size:12.5px;color:var(--grey-700);">rights_and_services.docx</span>
+                <span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Translation task</span>
+                <span class="tj2-badge-soft">Part 1/2</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a href="Org-Task-Edit-Hybrid.html" class="tj2-btn tj2-btn-accent"><i class="fa-solid fa-pen"></i> Edit task details</a>
+          </div>
+        </div>
+
+        <hr style="border-color:var(--grey-100);margin:20px 0;">
+
+        <!-- Stages -->
+        <div class="stage-row">
+          <div class="stage-pill active">
+            <div class="stage-title"><i class="fa-solid fa-language" style="margin-right:5px;"></i> Translation</div>
+            <div class="stage-meta">In progress</div>
+            <div class="stage-checklist">
+              <div class="done"><i class="fa-solid fa-circle-check" style="margin-right:6px;"></i>Review the instructions</div>
+              <div class="pending"><i class="fa-regular fa-circle" style="margin-right:6px;"></i>Work on the task</div>
+              <div class="pending"><i class="fa-regular fa-circle" style="margin-right:6px;"></i>Provide feedback</div>
+            </div>
+          </div>
+          <div class="stage-pill">
+            <div class="stage-title"><i class="fa-solid fa-spell-check" style="margin-right:5px;"></i> Proofreading</div>
+            <div class="stage-meta">Waiting</div>
+          </div>
+          <div class="stage-pill">
+            <div class="stage-title"><i class="fa-solid fa-truck" style="margin-right:5px;"></i> Delivery</div>
+            <div class="stage-meta">Pending</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key info row -->
+      <div class="keyrow">
+        <div class="k">
+          <div class="ico"><i class="fa-solid fa-earth-americas"></i></div>
+          <div><div class="label">Language pair</div><div class="value">English → Swahili</div></div>
+        </div>
+        <div class="k">
+          <div class="ico"><i class="fa-regular fa-clock"></i></div>
+          <div><div class="label">Task deadline</div><div class="value" style="color:var(--danger);">Jul 17, 2026</div></div>
+        </div>
+        <div class="k">
+          <div class="ico"><i class="fa-regular fa-file-lines"></i></div>
+          <div><div class="label">Words</div><div class="value">5,240 words</div></div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;align-items:start;">
+        <div>
+
+          <!-- Description -->
+          <div class="tj2-card">
+            <div class="tj2-card-head"><h2 style="font-size:16px;">Description</h2></div>
+            <p style="margin:0;">This handbook is distributed to newly arrived refugees during intake at reception centers. It covers registration, available services, rights, and emergency contacts.</p>
+          </div>
+
+          <!-- Project-specific instructions (accordion) -->
+          <div class="tj2-card" style="padding:0;border-left:3px solid var(--twb-accent);">
+            <div class="accordion-hdr open" onclick="tjAccordion('acc-instructions')">
+              Project-specific instructions
+              <i class="fa-solid fa-chevron-down chev"></i>
+            </div>
+            <div class="accordion-body" id="acc-instructions">
+              <p style="margin:0 0 10px;color:var(--grey-700);">Use plain, direct language at a grade 6–7 reading level. Keep official service names in English with a translated gloss in parentheses on first use. Do not translate the organization's name.</p>
+              <p style="margin:0;font-style:italic;color:var(--grey-700);">Task note: prioritize the "Rights" and "Emergency Contacts" sections — these are being printed as standalone flyers first.</p>
+            </div>
+          </div>
+
+          <!-- References and style guides (accordion) -->
+          <div class="tj2-card" style="padding:0;border-left:3px solid var(--core-blue);">
+            <div class="accordion-hdr open" onclick="tjAccordion('acc-refs')">
+              References and style guides
+              <i class="fa-solid fa-chevron-down chev"></i>
+            </div>
+            <div class="accordion-body" id="acc-refs">
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <a href="#" style="display:flex;align-items:center;gap:6px;font-size:13px;"><i class="fa-solid fa-book"></i> Style guide — plain language basics</a>
+                <a href="#" style="display:flex;align-items:center;gap:6px;font-size:13px;"><i class="fa-solid fa-book"></i> Glossary — health &amp; relief terms</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Source file (accordion) -->
+          <div class="tj2-card" style="padding:0;border-left:3px solid var(--purple-chunk);">
+            <div class="accordion-hdr open" onclick="tjAccordion('acc-source')">
+              Source file
+              <i class="fa-solid fa-chevron-down chev"></i>
+            </div>
+            <div class="accordion-body" id="acc-source">
+              <a href="#" class="tj2-btn tj2-btn-navy" style="margin-bottom:14px;"><i class="fa-solid fa-download"></i> Download source file</a>
+              <div style="background:var(--light-mariam);border:1px solid var(--grey-100);border-radius:8px;padding:36px;display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--grey-700);font-size:13px;">
+                <i class="fa-regular fa-file-lines" style="font-size:26px;color:var(--grey-300);margin-bottom:10px;"></i>
+                Document preview — rights_and_services.docx
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <!-- Claimed by (shown once a linguist has claimed the task; otherwise this becomes "Assign to a linguist") -->
+          <div class="tj2-card">
+            <div style="font-size:11.5px;font-weight:700;color:var(--grey-700);text-transform:uppercase;letter-spacing:.04em;margin-bottom:14px;">Claimed by</div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+              <img class="tj2-avatar" style="width:46px;height:46px;" src="https://www.gravatar.com/avatar/3?d=identicon&s=92">
+              <div>
+                <div style="font-weight:700;">Yusuf Khalil</div>
+                <a href="Org-User-Profile-Hybrid.html" style="font-size:12.5px;">View profile →</a>
+              </div>
+            </div>
+            <div style="font-size:12.5px;color:var(--grey-700);">Claimed Jun 21, 2026</div>
+          </div>
+
+          <!-- Assign to a linguist — only relevant for unclaimed tasks; shown alongside "Claimed by" here for prototype purposes only, not both together in the built platform -->
+          <div class="tj2-card">
+            <div style="font-size:11.5px;font-weight:700;color:var(--grey-700);text-transform:uppercase;letter-spacing:.04em;margin-bottom:14px;">Assign to a linguist</div>
+            <select style="width:100%;padding:9px 12px;border:1.5px solid var(--grey-100);border-radius:8px;font-family:inherit;font-size:13px;margin-bottom:10px;">
+              <option>Select a qualified translator…</option>
+              <option>Yusuf Khalil — EN→SW</option>
+              <option>Grace Mwangi — EN→SW</option>
+            </select>
+            <input style="width:100%;padding:9px 12px;border:1.5px solid var(--grey-100);border-radius:8px;font-family:inherit;font-size:13px;" placeholder="…or invite by email">
+            <a href="#" style="display:block;text-align:center;font-size:12.5px;margin-top:12px;">Search for translators →</a>
+          </div>
+
+          <div class="tj2-card">
+            <div class="tj2-card-head"><h2 style="font-size:16px;">Translation instructions</h2></div>
+            <a href="#" class="tj2-btn tj2-btn-outline tj2-btn-sm" style="width:100%;margin-bottom:12px;"><i class="fa-solid fa-book-open"></i> Full instructions</a>
+            <p style="margin:0;color:var(--grey-700);font-size:13px;">Translate the source document faithfully while adapting tone and terminology for the target audience described in the project instructions. Preserve formatting, headings, and numbered lists.</p>
+          </div>
+
+          <!-- Organization feedback -->
+          <div class="tj2-card">
+            <div class="tj2-card-head"><h2 style="font-size:16px;">Organization feedback</h2></div>
+            <textarea style="width:100%;min-height:90px;padding:10px 12px;border:1.5px solid var(--grey-100);border-radius:8px;font-family:inherit;font-size:13px;margin-bottom:12px;" placeholder="Leave feedback for the assigned linguist…"></textarea>
+            <label style="display:flex;align-items:center;gap:6px;font-size:12.5px;margin-bottom:12px;"><input type="checkbox"> Add user to deny list</label>
+            <div style="display:flex;gap:8px;">
+              <button type="button" class="tj2-btn tj2-btn-sm" style="background:#fdecea;color:var(--danger);">Revoke task</button>
+              <button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm">Reset</button>
+              <button type="button" class="tj2-btn tj2-btn-accent tj2-btn-sm" style="margin-left:auto;">Submit feedback</button>
+            </div>
+          </div>
+
+          <div class="tj2-card">
+            <div class="tj2-card-head"><h2 style="font-size:16px;">Questions or comments?</h2></div>
+            <a href="#" class="tj2-btn tj2-btn-navy" style="width:100%;"><i class="fa-regular fa-comments"></i> Project forum</a>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjAccordion(id) {
+  const body = document.getElementById(id);
+  const hdr = body.previousElementSibling;
+  const open = body.style.display !== 'none';
+  body.style.display = open ? 'none' : 'block';
+  hdr.classList.toggle('open', !open);
+}
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+</script>
+</body>
+</html>
