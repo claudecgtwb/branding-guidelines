@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manage Users · Refugee Aid NGO · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/tarjimly-v2-theme.css">
+<style>
+  .platform-badges { display: flex; gap: 5px; flex-wrap: wrap; }
+  .platform-pill { display: inline-flex; align-items: center; gap: 4px; font-size: 10.5px; font-weight: 700; padding: 3px 8px; border-radius: 999px; }
+  .platform-pill.interp { background: var(--navy-soft); color: var(--core-blue); }
+  .platform-pill.transl { background: #fef4e2; color: #a15c00; }
+  .section-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+  .section-head h2 { margin: 0; font-size: 19px; font-weight: 800; }
+</style>
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-sidebar-scroll">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">Refugee Aid NGO</div><div class="sub">Organization · Admin</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-tarjimly')"><img src="assets/images/tarjimly-icon.svg" class="grp-icon" alt="">Tarjimly<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-tarjimly">
+      <li><a href="Text-Translations-Hybrid.html"><i class="fa-solid fa-language fa-fw"></i> Text translations</a></li>
+      <li><a href="Call-Interpreters-Hybrid.html"><i class="fa-solid fa-phone fa-fw"></i> Call interpreters</a></li>
+    </ul>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-twb')"><img src="assets/images/twb-mark.svg" class="grp-icon" alt="">TWB Platform<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-twb">
+      <li><a href="Dashboard-Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="Org-Projects-Hybrid.html"><i class="fa-solid fa-diagram-project fa-fw"></i> Projects <span class="count">4</span></a></li>
+      <li><a href="News-List-Hybrid.html"><i class="fa-solid fa-newspaper fa-fw"></i> News &amp; updates <span class="count">2</span></a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning center</a></li>
+    </ul>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-org')">Organization<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-org">
+      <li><a href="Organization-Hybrid.html"><i class="fa-solid fa-building fa-fw"></i> NGO Profile</a></li>
+      <li><a href="Billing-Hybrid.html"><i class="fa-solid fa-file-invoice-dollar fa-fw"></i> Billing</a></li>
+      <li><a href="#" class="active"><i class="fa-solid fa-users fa-fw"></i> Manage users</a></li>
+    </ul>
+
+    </div>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Samira Al-Ahmad</div><div class="email">samira@refugeeaid.org</div></div>
+      </div>
+      <a href="Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <div class="tj2-page-head">
+        <div><h1 class="tj2-h1">Manage Users</h1></div>
+        <div style="display:flex;gap:8px;">
+          <button type="button" class="tj2-btn tj2-btn-outline"><i class="fa-solid fa-file-invoice-dollar"></i> Manage subscription</button>
+          <button type="button" class="tj2-btn tj2-btn-navy"><i class="fa-solid fa-plus"></i> Add team members</button>
+        </div>
+      </div>
+
+      <div class="tj2-tabs" role="tablist">
+        <button type="button" class="tj2-tab active" data-tab="team" onclick="tjShowTab('team')">Team</button>
+        <button type="button" class="tj2-tab" data-tab="community" onclick="tjShowTab('community')">Community</button>
+      </div>
+
+      <!-- ================= TEAM ================= -->
+      <div class="tj2-tab-panel active" id="panel-team">
+        <div class="tj2-card" style="padding:0;">
+          <div class="tj2-table-wrap">
+            <table class="tj2-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email Address</th>
+                  <th>Subscription</th>
+                  <th>Add-Ons</th>
+                  <th>Payment Status</th>
+                  <th>Platform</th>
+                  <th>Role</th>
+                  <th style="text-align:right;">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight:600;"><i class="fa-solid fa-circle-user" style="margin-right:8px;color:var(--grey-700);"></i>Samira Al-Ahmad</td>
+                  <td>samira@refugeeaid.org</td>
+                  <td><span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Premium</span></td>
+                  <td><span class="tj2-badge tj2-badge-outline">Hotline</span></td>
+                  <td><span class="tj2-badge tj2-badge-success">active</span></td>
+                  <td>
+                    <div class="platform-badges">
+                      <span class="platform-pill interp">Interpretation</span>
+                      <span class="platform-pill transl">Translation</span>
+                    </div>
+                  </td>
+                  <td>Admin</td>
+                  <td style="text-align:right;">
+                    <button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-ellipsis"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-weight:600;"><i class="fa-solid fa-circle-user" style="margin-right:8px;color:var(--grey-700);"></i>Karim Nasser</td>
+                  <td>karim@refugeeaid.org</td>
+                  <td><span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Premium</span></td>
+                  <td><span style="font-size:12.5px;color:var(--grey-700);">&mdash;</span></td>
+                  <td><span class="tj2-badge tj2-badge-success">active</span></td>
+                  <td>
+                    <div class="platform-badges">
+                      <span class="platform-pill transl">Translation</span>
+                    </div>
+                  </td>
+                  <td>Project Officer</td>
+                  <td style="text-align:right;">
+                    <button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-ellipsis"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-weight:600;"><i class="fa-solid fa-circle-user" style="margin-right:8px;color:var(--grey-700);"></i>Nadia Haddad</td>
+                  <td>nadia@refugeeaid.org</td>
+                  <td><span class="tj2-badge tj2-badge-outline">Free</span></td>
+                  <td><span style="font-size:12.5px;color:var(--grey-700);">&mdash;</span></td>
+                  <td><span class="tj2-badge tj2-badge-pending">pending</span></td>
+                  <td>
+                    <div class="platform-badges">
+                      <span class="platform-pill interp">Interpretation</span>
+                    </div>
+                  </td>
+                  <td>Aid Worker</td>
+                  <td style="text-align:right;">
+                    <button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-ellipsis"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= COMMUNITY ================= -->
+      <div class="tj2-tab-panel" id="panel-community">
+
+        <div class="section-head">
+          <p style="margin:0;font-size:13px;color:var(--grey-700);max-width:520px;">Volunteer and professional linguists affiliated with Refugee Aid NGO.</p>
+          <a href="Contributor onboarding-Branded by Claude Code.html?org=Refugee+Aid+NGO" class="tj2-btn tj2-btn-accent"><i class="fa-solid fa-user-plus"></i> Sign-up link</a>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
+          <div class="tj2-card" style="margin-bottom:0;">
+            <span class="tj2-lang-box" style="margin-bottom:10px;display:inline-block;">Swahili to English</span>
+            <a href="Org-User-Profile-Hybrid.html" style="font-weight:700;font-size:14px;color:var(--dark-mariam);display:block;">Maria Kowalski</a>
+            <div style="font-size:12.5px;color:var(--grey-700);margin-bottom:14px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;">maria.k+linguist@refugeeaid.org</div>
+            <button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm" style="width:100%;">Manage Member</button>
+          </div>
+          <div class="tj2-card" style="margin-bottom:0;">
+            <span class="tj2-lang-box" style="margin-bottom:10px;display:inline-block;">Arabic to English</span>
+            <a href="Org-User-Profile-Hybrid.html" style="font-weight:700;font-size:14px;color:var(--dark-mariam);display:block;">Yusuf Khalil</a>
+            <div style="font-size:12.5px;color:var(--grey-700);margin-bottom:14px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;">yusuf.k+linguist@refugeeaid.org</div>
+            <button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm" style="width:100%;">Manage Member</button>
+          </div>
+          <div class="tj2-card" style="margin-bottom:0;">
+            <span class="tj2-lang-box" style="margin-bottom:10px;display:inline-block;">French to English</span>
+            <a href="Org-User-Profile-Hybrid.html" style="font-weight:700;font-size:14px;color:var(--dark-mariam);display:block;">Grace Mwangi</a>
+            <div style="font-size:12.5px;color:var(--grey-700);margin-bottom:14px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;">grace.m+linguist@refugeeaid.org</div>
+            <button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm" style="width:100%;">Manage Member</button>
+          </div>
+        </div>
+
+        <a href="#" style="display:inline-block;margin-top:18px;font-weight:700;font-size:13px;color:var(--core-blue);"><i class="fa-solid fa-download" style="margin-right:5px;"></i> Download Organization Members</a>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+function tjToggleGroup(labelEl, listId) {
+  labelEl.classList.toggle('collapsed');
+  document.getElementById(listId).classList.toggle('collapsed');
+}
+function tjShowTab(name) {
+  document.querySelectorAll('.tj2-tab').forEach(function (el) {
+    el.classList.toggle('active', el.dataset.tab === name);
+  });
+  document.querySelectorAll('.tj2-tab-panel').forEach(function (el) {
+    el.classList.toggle('active', el.id === 'panel-' + name);
+  });
+}
+</script>
+</body>
+</html>
