@@ -465,6 +465,37 @@
   color: var(--core-blue);
 }
 
+/* Org-level sub-nav (Home / Projects / News & updates / Learning center),
+   matching NgoSubNav in tarjimly-web — shown above the page header on
+   most org pages. */
+.tj2-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-bottom: 1px solid var(--grey-100);
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.tj2-subnav a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--grey-700);
+  text-decoration: none;
+}
+
+.tj2-subnav a:hover {
+  background: #fff;
+  color: var(--dark-mariam);
+}
+
+.tj2-subnav a.active {
+  background: var(--navy-soft);
+  color: var(--core-blue);
+}
+
 /* Packages */
 .pkg-grid {
   display: grid;
