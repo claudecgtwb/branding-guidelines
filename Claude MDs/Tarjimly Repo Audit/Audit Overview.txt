@@ -1,0 +1,50 @@
+ Here's what the audit covers:
+
+  ---
+  Section 1 — Repository overview: `tarjimly-web` is a thin Next.js 15 client — no DB, no ORM, almost
+  all business logic lives in an external backend (tarjim.ly / us.tarjim.ly) not included in this repo.
+
+  Section 2 — Technology & dependency map:
+  - Frontend: Next.js 15.5 (App Router), React 18.3, TypeScript, Tailwind 3, shadcn/Radix UI, SWR for
+  all data fetching, react-hook-form + zod for forms.
+  - Real-time: LiveKit (current call provider, Krisp noise filter) with a legacy Dyte provider still
+  referenced in types. Firebase (client + admin): Auth via custom token only, Firestore for real-time
+  session/call state, Storage for document uploads (made public unconditionally — a flagged risk).
+  - Analytics/observability: PostHog, Statsig (also feature flags), LogRocket.
+  - No test suite, no .env.example, both package-lock.json and yarn.lock committed.
+  - Deployment: Vercel GitHub integration, branch-based environments, no manual deploy step.
+
+  Section 3 — Functional documentation: two user roles (aidworker, translator) plus an orthogonal
+  enterprise/non-profit organization dimension; two product domains — real-time interpretation calls
+  (session request → match → LiveKit call → rating) and async translation jobs (optional AI first-pass
+  via "Spark" → human submission → structured feedback), each mirrored for enterprise tenants.
+
+  Section 4 — Route map: all App Router pages by role/tenant, the one local API route (/api/upload),
+  and the external API surface as referenced by the client — split awkwardly across /api/mobile/v2/*
+  (legacy, shared with the native mobile app) and /api/v3/* (newer, web/enterprise-first) with
+  inconsistent coverage between the two.
+
+  Section 5 — Data model (inferred, not verified): User/Organization/OrganizationMember/Subscription
+  identity & billing shapes, SessionRequestEntity/ActiveSessionEntity/FirebaseSessionEntity for
+  real-time calls, TranslationJob/Submission for async jobs — all reconstructed from client-side
+  TypeScript interfaces since no schema exists in this repo.
+
+  Section 6 — Auth & tenancy: email/password only (no Google/SAML in this repo); session cookie
+  (connect.sid, Express-session convention) is set by client JS from the login response body rather
+  than a proper Set-Cookie header — flagged as a real XSS-exposure risk. Tenancy (regular vs.
+  enterprise) is decided purely by HTTP Host header against a hardcoded allowlist, routing to two
+  entirely different backend hosts. A separate Firebase custom-token identity runs in parallel with
+  the backend session, used only for real-time Firestore access.
+
+  Section 7 — External integrations table: backend API, Firebase (Auth/Firestore/Storage), LiveKit,
+  Dyte (legacy), Stripe (backend-mediated only), Statsig, PostHog, LogRocket, Vercel.
+
+  Section 8 — Merge-relevant risks: 10 named items, most load-bearing for a TWB+Tarjimly merge —
+  the real data model/backend being off-repo, the non-HttpOnly session cookie, two overlapping API
+  versions, hardcoded host-based tenancy, two parallel identity systems (backend cookie + Firebase),
+  client-only authorization gates, public file uploads, legacy call provider ambiguity, no tests, and
+  an ambiguous package manager.
+
+  See `login.md` for a full flow-by-flow login breakdown (including an integration assessment against
+  TWB's proposed GIP unification from `TWB Repo Audit/login-unification.md`), and `CLAUDE.md` for a
+  fast developer-oriented summary.
