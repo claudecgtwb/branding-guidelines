@@ -14,32 +14,35 @@
 
   <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
   <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-sidebar-scroll">
     <div class="tj2-org-chip">
       <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
       <div><div class="name">Refugee Aid NGO</div><div class="sub">Organization · Admin</div></div>
     </div>
     <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
 
-    <div class="tj2-nav-label">Tarjimly</div>
-    <ul class="tj2-nav">
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-tarjimly')"><img src="assets/images/tarjimly-icon.svg" class="grp-icon" alt="">Tarjimly<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-tarjimly">
       <li><a href="Text-Translations-Hybrid.html"><i class="fa-solid fa-language fa-fw"></i> Text translations</a></li>
       <li><a href="Call-Interpreters-Hybrid.html"><i class="fa-solid fa-phone fa-fw"></i> Call interpreters</a></li>
     </ul>
 
-    <div class="tj2-nav-label">TWB Platform</div>
-    <ul class="tj2-nav">
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-twb')"><img src="assets/images/twb-mark.svg" class="grp-icon" alt="">TWB Platform<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-twb">
       <li><a href="Dashboard-Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
       <li><a href="Org-Projects-Hybrid.html"><i class="fa-solid fa-diagram-project fa-fw"></i> Projects <span class="count">4</span></a></li>
       <li><a href="News-List-Hybrid.html"><i class="fa-solid fa-newspaper fa-fw"></i> News &amp; updates <span class="count">2</span></a></li>
       <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning center</a></li>
     </ul>
 
-    <div class="tj2-nav-label">Organization</div>
-    <ul class="tj2-nav">
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-org')">Organization<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-org">
       <li><a href="#" class="active"><i class="fa-solid fa-building fa-fw"></i> NGO Profile</a></li>
       <li><a href="Billing-Hybrid.html"><i class="fa-solid fa-file-invoice-dollar fa-fw"></i> Billing</a></li>
       <li><a href="#"><i class="fa-solid fa-users fa-fw"></i> Manage users</a></li>
     </ul>
+
+    </div>
 
     <div class="tj2-sidebar-footer">
       <div class="tj2-sidebar-footer-user">
@@ -128,6 +131,10 @@ function tjOpenMenu() {
 function tjCloseMenu() {
   document.getElementById('tjSidebar').classList.remove('tj2-open');
   document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+function tjToggleGroup(labelEl, listId) {
+  labelEl.classList.toggle('collapsed');
+  document.getElementById(listId).classList.toggle('collapsed');
 }
 </script>
 </body>
