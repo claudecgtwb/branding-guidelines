@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Billing Details · Refugee Aid NGO · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/tarjimly-v2-theme.css">
+<style>
+  /* Page-specific tweaks that don't belong in the shared theme file */
+  .bill-summary-head { display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; gap:16px; padding-bottom:2px; }
+  .bill-summary-table-wrap { background:var(--paper); border-radius:8px; padding:16px; max-width:520px; margin-top:16px; }
+  .stripe-row { display:flex; align-items:center; gap:16px; cursor:pointer; }
+  .stripe-icon { display:flex; align-items:center; justify-content:center; height:64px; width:64px; border-radius:8px; background:var(--paper); border:1px solid var(--grey-100); font-size:24px; color:var(--core-blue); flex-shrink:0; }
+  .section-head { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; }
+  .section-head h2 { margin:0; font-size:19px; font-weight:800; }
+  .plans-grid { display:grid; grid-template-columns: 1.4fr repeat(3, 1fr); border:1px solid var(--grey-100); border-radius:var(--radius-sm); overflow:hidden; background:#fff; }
+  .plans-grid > div { border-right:1px solid var(--grey-100); }
+  .plans-grid > div:last-child { border-right:none; }
+  .plans-col-head { padding:22px 18px; min-height:170px; display:flex; flex-direction:column; justify-content:space-between; }
+  .plans-col-head h3 { margin:0 0 8px; font-size:15px; font-weight:800; text-align:center; }
+  .plans-feature-head { padding:22px 18px; min-height:170px; display:flex; flex-direction:column; justify-content:center; }
+  .plans-feature-head h3 { margin:0 0 8px; font-size:16px; font-weight:800; }
+  .plans-feature-head p { margin:0; font-size:12px; color:var(--grey-700); }
+  .plans-price { text-align:center; margin-top:10px; }
+  .plans-price .amount { font-size:22px; font-weight:800; }
+  .plans-price .detail { font-size:12px; color:var(--grey-700); }
+  .plans-row { padding:16px 18px; border-top:1px solid var(--grey-100); font-size:13px; display:flex; align-items:center; min-height:54px; }
+  .plans-row.center { justify-content:center; }
+  .plans-check { color:var(--core-blue); font-size:15px; }
+  @media (max-width: 900px) { .plans-grid { grid-template-columns: 1fr; } .plans-grid > div { border-right:none; border-bottom:1px solid var(--grey-100); } }
+</style>
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">Refugee Aid NGO</div><div class="sub">Organization · Admin</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label">Tarjimly</div>
+    <ul class="tj2-nav">
+      <li><a href="#"><i class="fa-solid fa-language fa-fw"></i> Text translations</a></li>
+      <li><a href="#"><i class="fa-solid fa-phone fa-fw"></i> Call interpreters</a></li>
+      <li><a href="#" class="active"><i class="fa-solid fa-file-invoice-dollar fa-fw"></i> Billing</a></li>
+      <li><a href="#"><i class="fa-solid fa-users fa-fw"></i> Manage users</a></li>
+    </ul>
+
+    <div class="tj2-nav-label">TWB Platform</div>
+    <ul class="tj2-nav">
+      <li><a href="../Dashboard-Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="../Organization-Hybrid.html"><i class="fa-solid fa-building fa-fw"></i> Organization</a></li>
+      <li><a href="../Org-Projects-Hybrid.html"><i class="fa-solid fa-diagram-project fa-fw"></i> Projects <span class="count">4</span></a></li>
+      <li><a href="../News-List-Hybrid.html"><i class="fa-solid fa-newspaper fa-fw"></i> News &amp; updates <span class="count">2</span></a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning center</a></li>
+    </ul>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Samira Al-Ahmad</div><div class="email">samira@refugeeaid.org</div></div>
+      </div>
+      <a href="../Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <div class="tj2-page-head">
+        <div>
+          <h1 class="tj2-h1">Billing Details</h1>
+        </div>
+      </div>
+
+      <div class="tj2-tabs" role="tablist">
+        <button type="button" class="tj2-tab active" data-tab="overview" onclick="tjShowTab('overview')">Overview</button>
+        <button type="button" class="tj2-tab" data-tab="billing-portal" onclick="tjShowTab('billing-portal')">Billing Portal</button>
+        <button type="button" class="tj2-tab" data-tab="interpretation" onclick="tjShowTab('interpretation')">Interpretation</button>
+        <button type="button" class="tj2-tab" data-tab="translation" onclick="tjShowTab('translation')">Translation</button>
+      </div>
+
+      <!-- ================= OVERVIEW ================= -->
+      <div class="tj2-tab-panel active" id="panel-overview">
+
+        <div class="tj2-card">
+          <div class="tj2-card-head">
+            <h2>Organization&apos;s details</h2>
+            <button type="button" class="tj2-btn tj2-btn-navy tj2-btn-sm"><i class="fa-solid fa-pencil"></i> Edit details</button>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="display:grid;grid-template-columns:140px 1fr;gap:6px;">
+              <span style="font-size:13px;font-weight:600;color:var(--grey-700);">Name</span>
+              <span style="font-size:13px;">Refugee Aid NGO</span>
+            </div>
+            <div style="display:grid;grid-template-columns:140px 1fr;gap:6px;">
+              <span style="font-size:13px;font-weight:600;color:var(--grey-700);">Contact Address</span>
+              <span style="font-size:13px;">14 Rainbow Street, Amman, Jordan</span>
+            </div>
+            <div style="display:grid;grid-template-columns:140px 1fr;gap:6px;">
+              <span style="font-size:13px;font-weight:600;color:var(--grey-700);">Email Address</span>
+              <span style="font-size:13px;">billing@refugeeaid.org</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:26px;">
+          <div class="section-head">
+            <h2 style="font-size:17px;">Admin Management</h2>
+          </div>
+          <div class="tj2-card" style="padding:0;">
+            <div class="tj2-table-wrap">
+              <table class="tj2-table">
+                <thead>
+                  <tr><th style="width:260px;">Name</th><th>Email Address</th><th style="text-align:right;">Action</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight:600;"><i class="fa-solid fa-circle-user" style="margin-right:8px;color:var(--grey-700);"></i>Samira Al-Ahmad</td>
+                    <td>samira@refugeeaid.org</td>
+                    <td style="text-align:right;"><button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm">Remove admin</button></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;"><i class="fa-solid fa-circle-user" style="margin-right:8px;color:var(--grey-700);"></i>Karim Nasser</td>
+                    <td>karim@refugeeaid.org</td>
+                    <td style="text-align:right;"><button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm">Remove admin</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:flex-end;margin-top:12px;">
+            <button type="button" class="tj2-btn tj2-btn-navy tj2-btn-sm"><i class="fa-solid fa-plus"></i> Add new admin</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= BILLING PORTAL ================= -->
+      <div class="tj2-tab-panel" id="panel-billing-portal">
+
+        <div class="tj2-card">
+          <div class="bill-summary-head">
+            <div>
+              <span class="tj2-badge tj2-badge-success" style="margin-bottom:12px;">Active Subscription</span>
+              <h2 style="margin:0 0 4px;font-size:26px;font-weight:800;">Tarjimly Premium</h2>
+              <p style="margin:0;font-size:13px;">Billed monthly</p>
+            </div>
+            <button type="button" class="tj2-btn tj2-btn-navy"><i class="fa-solid fa-file-lines"></i> Manage subscriptions</button>
+          </div>
+          <div class="bill-summary-table-wrap">
+            <div class="tj2-table-wrap">
+              <table class="tj2-table" style="background:transparent;">
+                <thead><tr><th>Subscription Type</th><th>Users</th></tr></thead>
+                <tbody>
+                  <tr><td style="font-weight:600;">Premium Monthly</td><td>12</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="tj2-card">
+          <div class="stripe-row">
+            <div class="stripe-icon"><i class="fa-brands fa-stripe-s"></i></div>
+            <div>
+              <h3 style="margin:0 0 4px;font-size:16px;font-weight:700;">Visit Stripe&apos;s Billing Portal</h3>
+              <p style="margin:0;font-size:13px;color:var(--grey-700);">Change payment method, change payment details and view upcoming charges.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Packages and subscriptions (from org/119/profile), extended with Order Number + Date -->
+        <div style="margin-top:8px;">
+          <div class="section-head">
+            <h2>Packages and subscriptions</h2>
+            <button type="button" class="tj2-btn tj2-btn-accent" onclick="tjShowTab('translation')"><i class="fa-solid fa-compass"></i> Explore packages</button>
+          </div>
+          <div class="tj2-card" style="padding:0;">
+            <div class="tj2-table-wrap">
+              <table class="tj2-table">
+                <thead>
+                  <tr>
+                    <th>Order Number</th>
+                    <th>Date</th>
+                    <th>Package name</th>
+                    <th>Validity period</th>
+                    <th>Allocation &amp; usage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight:600;">PO-24817</td>
+                    <td>Jan 03, 2026</td>
+                    <td style="font-weight:700;">Translation</td>
+                    <td style="color:var(--grey-700);">Jan 1, 2026 → Dec 31, 2026</td>
+                    <td>
+                      <div class="tj2-progress" style="max-width:180px;height:6px;margin-bottom:5px;"><span style="width:64%"></span></div>
+                      <span style="font-size:12.5px;color:var(--grey-700);">64,200 / 100,000 words used</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;">PO-24818</td>
+                    <td>Jan 03, 2026</td>
+                    <td style="font-weight:700;">Other</td>
+                    <td style="color:var(--grey-700);">Jan 1, 2026 → Dec 31, 2026</td>
+                    <td><span style="font-size:12.5px;color:var(--grey-700);">Unlimited</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:26px;">
+          <div class="section-head">
+            <h2>Billing History</h2>
+          </div>
+          <div class="tj2-card" style="padding:0;">
+            <div class="tj2-table-wrap">
+              <table class="tj2-table">
+                <thead>
+                  <tr>
+                    <th>Order Number</th>
+                    <th>Date</th>
+                    <th>Users</th>
+                    <th>Subscription Type</th>
+                    <th>Status</th>
+                    <th style="text-align:center;">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight:600;">INV-10432</td>
+                    <td>Aug 01, 2026</td>
+                    <td>12</td>
+                    <td style="text-transform:capitalize;">premium monthly</td>
+                    <td><span class="tj2-badge tj2-badge-success">active</span></td>
+                    <td style="text-align:center;"><button type="button" class="tj2-btn tj2-btn-navy tj2-btn-sm">Download invoice</button></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;">INV-10388</td>
+                    <td>Jul 01, 2026</td>
+                    <td>10</td>
+                    <td style="text-transform:capitalize;">premium monthly</td>
+                    <td><span class="tj2-badge tj2-badge-success">active</span></td>
+                    <td style="text-align:center;"><button type="button" class="tj2-btn tj2-btn-navy tj2-btn-sm">Download invoice</button></td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600;">INV-10311</td>
+                    <td>Jun 01, 2026</td>
+                    <td>10</td>
+                    <td style="text-transform:capitalize;">premium monthly</td>
+                    <td><span class="tj2-badge tj2-badge-pending">pending</span></td>
+                    <td style="text-align:center;"><button type="button" class="tj2-btn tj2-btn-navy tj2-btn-sm">Pay</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= INTERPRETATION (renamed from Features) ================= -->
+      <div class="tj2-tab-panel" id="panel-interpretation">
+        <div class="plans-grid">
+          <div>
+            <div class="plans-feature-head">
+              <h3>Plans and Benefits</h3>
+              <p>Compare the interpretation plans available on Tarjimly for organizations.</p>
+            </div>
+            <div class="plans-row">Mobile App</div>
+            <div class="plans-row">Unlimited Sessions</div>
+            <div class="plans-row">On-Demand Volunteers</div>
+            <div class="plans-row">Internet Calling</div>
+            <div class="plans-row">Text Messaging</div>
+            <div class="plans-row">Voice Notes</div>
+            <div class="plans-row">HIPAA Eligible</div>
+            <div class="plans-row">Tarjimly Hub</div>
+            <div class="plans-row">Scheduling</div>
+            <div class="plans-row">Conference Calling</div>
+            <div class="plans-row">Video Calling</div>
+            <div class="plans-row">Includes Paid Translators</div>
+            <div class="plans-row">Filter the Interpreter pool</div>
+            <div class="plans-row">Higher Match Rates</div>
+            <div class="plans-row">Web Access</div>
+          </div>
+
+          <div>
+            <div class="plans-col-head">
+              <h3>Tarjimly Essentials</h3>
+              <button type="button" class="tj2-btn tj2-btn-outline" style="width:100%;justify-content:center;" disabled>Current Plan</button>
+              <div class="plans-price"><span class="amount">Free</span><div class="detail">/Lifetime</div></div>
+            </div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"></div>
+            <div class="plans-row center"></div>
+            <div class="plans-row center"></div>
+            <div class="plans-row center"></div>
+            <div class="plans-row center"></div>
+            <div class="plans-row center"></div>
+          </div>
+
+          <div>
+            <div class="plans-col-head">
+              <h3>Tarjimly Premium</h3>
+              <button type="button" class="tj2-btn tj2-btn-accent" style="width:100%;justify-content:center;" onclick="location.href='../Org-User-Profile-Hybrid.html'">Choose This Plan</button>
+              <div class="plans-price"><span class="amount">$25</span><div class="detail">/month</div></div>
+            </div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+          </div>
+
+          <div>
+            <div class="plans-col-head">
+              <h3>Tarjimly Sponsored</h3>
+              <button type="button" class="tj2-btn tj2-btn-accent" style="width:100%;justify-content:center;">Choose This Plan</button>
+              <div class="plans-price"><span class="amount">$10</span><div class="detail">/month</div></div>
+            </div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+            <div class="plans-row center"></div>
+            <div class="plans-row center"></div>
+            <div class="plans-row center"></div>
+            <div class="plans-row center"><i class="fa-solid fa-circle-check plans-check"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= TRANSLATION (new tab) ================= -->
+      <div class="tj2-tab-panel" id="panel-translation">
+        <p style="color:var(--grey-700);font-size:13px;margin:-4px 0 20px;max-width:620px;">
+          Choose a translation package for Refugee Aid NGO. Word allocations apply across all projects for one year from purchase.
+        </p>
+
+        <div class="pkg-grid">
+          <div class="pkg-card">
+            <div class="pkg-mark"><div class="pkg-mark-crop"><img src="../Logos/TWB_Logo_horizontal_primary_RGB.png" alt=""></div></div>
+            <div class="pkg-title">TWB Translation: 50k words</div>
+            <div class="pkg-price">US$1,000</div>
+            <a href="#" class="tj2-btn pkg-pay-btn">Pay</a>
+          </div>
+
+          <div class="pkg-card featured">
+            <span class="pkg-badge">Most popular</span>
+            <div class="pkg-mark"><div class="pkg-mark-crop"><img src="../Logos/TWB_Logo_horizontal_primary_RGB.png" alt=""></div></div>
+            <div class="pkg-title">TWB Translation: 100k words</div>
+            <div class="pkg-price">US$2,000</div>
+            <a href="#" class="tj2-btn pkg-pay-btn">Pay</a>
+          </div>
+
+          <div class="pkg-card">
+            <div class="pkg-mark"><div class="pkg-mark-crop"><img src="../Logos/TWB_Logo_horizontal_primary_RGB.png" alt=""></div></div>
+            <div class="pkg-title">TWB Translation: 150k words</div>
+            <div class="pkg-price">US$3,000</div>
+            <a href="#" class="tj2-btn pkg-pay-btn">Pay</a>
+          </div>
+
+          <div class="pkg-card">
+            <div class="pkg-mark"><img class="pkg-mark-icon" src="../Logos/CG icon_jpg.jpg" alt=""></div>
+            <div class="pkg-title">Need a Larger Translation Package?</div>
+            <div class="pkg-price" style="visibility:hidden;">—</div>
+            <a href="#" class="tj2-btn tj2-btn-navy">Contact us</a>
+          </div>
+        </div>
+
+        <div class="tj2-card" style="margin-top:26px;max-width:780px;">
+          <div class="tj2-card-head"><h2 style="font-size:16px;">Current package</h2></div>
+          <div>
+            <div style="font-weight:700;">Translation — Standard (100k words)</div>
+            <div style="font-size:12.5px;color:var(--grey-700);margin-top:4px;">Jan 1, 2026 → Dec 31, 2026 · 64,200 / 100,000 words used</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+function tjShowTab(name) {
+  document.querySelectorAll('.tj2-tab').forEach(function (el) {
+    el.classList.toggle('active', el.dataset.tab === name);
+  });
+  document.querySelectorAll('.tj2-tab-panel').forEach(function (el) {
+    el.classList.toggle('active', el.id === 'panel-' + name);
+  });
+}
+</script>
+</body>
+</html>
