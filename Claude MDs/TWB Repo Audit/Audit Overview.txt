@@ -1,0 +1,31 @@
+ Here's what the audit covers:
+
+  ---
+  Section 1 — Repository overview: Two repos, what each is, how they relate, the TWB/Kató branding history.
+
+  Section 2 — Technology & dependency map:
+  - Frontend: PHP 8, Slim 4 (two apps: UI + API), Smarty 4, Twig, league/oauth2-server (pinned dev-master), jQuery 1.9,
+  Bootstrap 3, Quill, protobuf-in-browser, a dead Dart/Polymer sub-app, vendored Google API client, TCPDF.
+  - Backend daemon: C++ on Qt 5/6, qmake, libprotobuf, Google ctemplate, Qxt SMTP library (vendored). No longer uses
+  RabbitMQ — replaced by a queue_requests DB table.
+  - Database: MySQL 8, 100+ tables, 300+ stored procedures (canonical home of all business logic), 16,599-line schema.
+  - Deployment: Apache + mod_xsendfile; Vagrant dev box is significantly out of date (PHP 5 / MySQL 5.5 / Ubuntu 14.04 — not
+   current).
+
+  Section 3 — Functional documentation: What the platform does in plain language, all 8 user roles (bitmask), 10 task types
+  + status codes, three end-user workflows (volunteer linguist, NGO partner, TWB staff), the full auth/session architecture,
+   an architecture diagram, the async queue model, the email system with Microsoft deliverability throttling, and a table of
+   all 13 external integrations (Phrase TMS, Asana, Discourse, Moodle, Neon CRM, HubSpot, Sun Systems, Zahara, DocuSign,
+  Google, Slack, Gravatar, Metabase).
+
+  Section 4 — Route map: All named UI routes across 5 handler classes, and all ~100 REST API endpoints by file.
+
+  Section 5 — Migration assessment:
+  - Transfers cleanly: DB schema, protobuf models → TypeScript, email templates → React-Email, localisation XML → JSON,
+  enums, integration credentials.
+  - Must be rewritten: Everything PHP/C++/jQuery — 12 specific components listed with recommended targets.
+  - 12 named risks: stored proc spec risk, Phrase TMS depth, dual-language constant duplication, hard-coded paths, session
+  migration, Microsoft email throttling, protobuf-in-browser decision, stale Vagrant, stale OAuth2 pin, no test suite,
+  phpinfo.php in production, hand-rolled HTML sanitisation.
+  - 5-phase migration plan: Instrument → Replace daemon → Next.js frontend → Replace API → Migrate stored procs → React
+  Native mobile.
