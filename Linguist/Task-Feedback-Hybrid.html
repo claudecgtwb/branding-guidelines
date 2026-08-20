@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feedback · handbook_intro.docx · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/tarjimly-v2-theme.css">
+<style>
+.score-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--grey-100); }
+.score-row:last-child { border-bottom: none; }
+.score-stars i { color: var(--grey-300); font-size: 13px; }
+.score-stars i.filled { color: var(--twb-accent); }
+</style>
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-sidebar-scroll">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">TWB Platform</div><div class="sub">Linguist</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-twb')"><img src="../assets/images/twb-mark.svg" class="grp-icon" alt="">TWB Platform<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-twb">
+      <li><a href="Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="Recent-Tasks-Hybrid.html" class="active"><i class="fa-solid fa-list-check fa-fw"></i> Tasks</a></li>
+      <li><a href="#"><i class="fa-solid fa-clipboard-check fa-fw"></i> My Tasks</a></li>
+      <li><a href="Profile-Edit-Hybrid.html"><i class="fa-solid fa-user fa-fw"></i> Profile</a></li>
+    </ul>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-resources')">Resources<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-resources">
+      <li><a href="#"><i class="fa-solid fa-comments fa-fw"></i> Community Forum</a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning Center</a></li>
+      <li><a href="#"><i class="fa-solid fa-book-open fa-fw"></i> Community Library</a></li>
+      <li><a href="#"><i class="fa-solid fa-compass fa-fw"></i> Platform Tour</a></li>
+    </ul>
+
+    </div>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Maria Kowalski</div><div class="email">maria.k+linguist@refugeeaid.org</div></div>
+      </div>
+      <a href="../Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content" style="max-width:820px;">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <div class="tj2-breadcrumb">
+        <a href="Home-Hybrid.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:9px;margin:0 4px;"></i>
+        <a href="Recent-Tasks-Hybrid.html">Tasks</a> <i class="fa-solid fa-chevron-right" style="font-size:9px;margin:0 4px;"></i>
+        <span style="color:var(--dark-mariam);font-weight:600;">Feedback</span>
+      </div>
+
+      <div class="tj2-page-head">
+        <div>
+          <h1 class="tj2-h1">handbook_intro.docx</h1>
+          <p><span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Translation</span> <span class="tj2-badge" style="background:#e9f7e8;color:var(--success);margin-left:6px;">Complete</span></p>
+        </div>
+      </div>
+
+      <div class="tj2-card" style="padding:0;overflow:hidden;">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:var(--light-mariam);">
+              <th style="text-align:left;padding:10px 18px;font-size:11px;text-transform:uppercase;color:var(--grey-700);">Organisation</th>
+              <th style="text-align:left;padding:10px 18px;font-size:11px;text-transform:uppercase;color:var(--grey-700);">Deadline</th>
+              <th style="text-align:left;padding:10px 18px;font-size:11px;text-transform:uppercase;color:var(--grey-700);">Claimed Date</th>
+              <th style="text-align:left;padding:10px 18px;font-size:11px;text-transform:uppercase;color:var(--grey-700);">Completed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:14px 18px;"><a href="../NGO/Organization-Hybrid.html">Refugee Aid NGO</a></td>
+              <td style="padding:14px 18px;">Jul 20, 2026</td>
+              <td style="padding:14px 18px;">Jun 15, 2026</td>
+              <td style="padding:14px 18px;">Jun 18, 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:20px;align-items:start;">
+        <div class="tj2-card">
+          <div class="tj2-card-head"><h2 style="font-size:16px;">Feedback from Refugee Aid NGO</h2></div>
+          <p style="margin:0;color:var(--grey-700);">Thank you, Maria — this translation read very naturally and kept the tone appropriate for a first-time reader of the handbook. A couple of section headings used the shortened service name instead of the full name on first use, but overall this was excellent work. We'd be glad to have you on future onboarding materials.</p>
+        </div>
+
+        <div class="tj2-card">
+          <div class="tj2-card-head"><h2 style="font-size:16px;">Your quality scores</h2></div>
+          <div class="score-row">
+            <span>Accuracy</span>
+            <span class="score-stars"><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i></span>
+          </div>
+          <div class="score-row">
+            <span>Fluency</span>
+            <span class="score-stars"><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star"></i></span>
+          </div>
+          <div class="score-row">
+            <span>Terminology</span>
+            <span class="score-stars"><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star"></i></span>
+          </div>
+          <div class="score-row">
+            <span>Style</span>
+            <span class="score-stars"><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i></span>
+          </div>
+          <div class="score-row">
+            <span>Design</span>
+            <span class="score-stars"><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star filled"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+          </div>
+          <p style="margin:12px 0 0;font-size:11.5px;color:var(--grey-700);font-style:italic;">Only visible to you.</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+function tjToggleGroup(labelEl, listId) {
+  labelEl.classList.toggle('collapsed');
+  document.getElementById(listId).classList.toggle('collapsed');
+}
+</script>
+</body>
+</html>

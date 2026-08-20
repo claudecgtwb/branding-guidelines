@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Task · emergency_contacts.docx · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/tarjimly-v2-theme.css">
+<style>
+.keyrow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 18px 0; }
+.keyrow .k { display: flex; gap: 12px; align-items: center; background: #fff; border: 1px solid var(--grey-100); border-radius: 10px; padding: 14px 16px; }
+.keyrow .k .ico { width: 34px; height: 34px; border-radius: 8px; background: var(--light-mariam); color: var(--core-blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.keyrow .k .label { font-size: 11px; color: var(--grey-700); text-transform: uppercase; font-weight: 700; }
+.keyrow .k .value { font-size: 13.5px; font-weight: 700; margin-top: 2px; }
+.accordion-hdr { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; cursor: pointer; font-weight: 700; font-size: 14.5px; }
+.accordion-hdr i.chev { transition: transform .15s ease; color: var(--grey-700); }
+.accordion-hdr.open i.chev { transform: rotate(180deg); }
+.accordion-body { padding: 0 20px 20px; }
+.also-viewed-card { border: 1px solid var(--grey-100); border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+.also-viewed-card:last-child { margin-bottom: 0; }
+@media (max-width: 900px) { .keyrow { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-sidebar-scroll">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">TWB Platform</div><div class="sub">Linguist</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-twb')"><img src="../assets/images/twb-mark.svg" class="grp-icon" alt="">TWB Platform<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-twb">
+      <li><a href="Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="Recent-Tasks-Hybrid.html" class="active"><i class="fa-solid fa-list-check fa-fw"></i> Tasks</a></li>
+      <li><a href="#"><i class="fa-solid fa-clipboard-check fa-fw"></i> My Tasks</a></li>
+      <li><a href="Profile-Edit-Hybrid.html"><i class="fa-solid fa-user fa-fw"></i> Profile</a></li>
+    </ul>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-resources')">Resources<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-resources">
+      <li><a href="#"><i class="fa-solid fa-comments fa-fw"></i> Community Forum</a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning Center</a></li>
+      <li><a href="#"><i class="fa-solid fa-book-open fa-fw"></i> Community Library</a></li>
+      <li><a href="#"><i class="fa-solid fa-compass fa-fw"></i> Platform Tour</a></li>
+    </ul>
+
+    </div>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Maria Kowalski</div><div class="email">maria.k+linguist@refugeeaid.org</div></div>
+      </div>
+      <a href="../Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <div class="tj2-breadcrumb">
+        <a href="Home-Hybrid.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:9px;margin:0 4px;"></i>
+        <a href="Recent-Tasks-Hybrid.html">Tasks</a> <i class="fa-solid fa-chevron-right" style="font-size:9px;margin:0 4px;"></i>
+        <span style="color:var(--dark-mariam);font-weight:600;">emergency_contacts.docx</span>
+      </div>
+
+      <!-- Header card -->
+      <div class="tj2-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;">
+          <div>
+            <div><a href="Project-View-Hybrid.html" style="font-size:12px;color:var(--grey-700);">Community Health Guidance — Flood Response</a></div>
+            <h1 class="tj2-h1" style="margin-top:4px;">emergency_contacts.docx</h1>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap;">
+              <span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Translation</span>
+              <span class="tj2-badge" style="background:#fef4e2;color:var(--twb-accent-dark);"><i class="fa-solid fa-circle" style="font-size:6px;"></i> Available</span>
+            </div>
+          </div>
+          <a href="Task-Claim-Hybrid.html" class="tj2-btn tj2-btn-accent"><i class="fa-solid fa-hand"></i> Claim this task</a>
+        </div>
+
+        <div class="keyrow">
+          <div class="k">
+            <div class="ico"><i class="fa-solid fa-earth-americas"></i></div>
+            <div><div class="label">Language pair</div><div class="value">English → Swahili</div></div>
+          </div>
+          <div class="k">
+            <div class="ico"><i class="fa-regular fa-clock"></i></div>
+            <div><div class="label">Task deadline</div><div class="value" style="color:var(--danger);">Aug 01, 2026</div></div>
+          </div>
+          <div class="k">
+            <div class="ico"><i class="fa-regular fa-file-lines"></i></div>
+            <div><div class="label">Words</div><div class="value">860 words</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;align-items:start;">
+        <div>
+
+          <!-- Description -->
+          <div class="tj2-card">
+            <div class="tj2-card-head"><h2 style="font-size:16px;">Project description</h2></div>
+            <p style="margin:0;">This project distributes emergency contact information to communities affected by seasonal flooding, so residents know who to reach for medical, shelter, and food assistance.</p>
+          </div>
+
+          <!-- Instructions (accordion) -->
+          <div class="tj2-card" style="padding:0;border-left:3px solid var(--twb-accent);">
+            <div class="accordion-hdr open" onclick="tjAccordion('acc-instructions')">
+              Translation instructions
+              <i class="fa-solid fa-chevron-down chev"></i>
+            </div>
+            <div class="accordion-body" id="acc-instructions">
+              <p style="margin:0 0 10px;color:var(--grey-700);">Use plain, direct language at a grade 6–7 reading level. Keep phone numbers and organization names unchanged. Preserve the original document's headings and numbered lists.</p>
+              <p style="margin:0;font-style:italic;color:var(--grey-700);">Task note: this is a short, time-sensitive file — please claim it only if you can turn it around within the deadline.</p>
+              <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px;">
+                <a href="#" style="display:flex;align-items:center;gap:6px;font-size:13px;"><i class="fa-solid fa-book"></i> Style guide — plain language basics</a>
+                <a href="#" style="display:flex;align-items:center;gap:6px;font-size:13px;"><i class="fa-solid fa-book"></i> Glossary — health &amp; relief terms</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Required qualification (accordion) -->
+          <div class="tj2-card" style="padding:0;border-left:3px solid var(--purple-chunk);">
+            <div class="accordion-hdr open" onclick="tjAccordion('acc-qualification')">
+              Required qualification level
+              <i class="fa-solid fa-chevron-down chev"></i>
+            </div>
+            <div class="accordion-body" id="acc-qualification">
+              <p style="margin:0;color:var(--grey-700);font-style:italic;">This task requires an intermediate (Level 2) or higher qualification in English → Swahili.</p>
+            </div>
+          </div>
+
+          <!-- Source file (accordion) -->
+          <div class="tj2-card" style="padding:0;border-left:3px solid var(--core-blue);">
+            <div class="accordion-hdr open" onclick="tjAccordion('acc-source')">
+              Source document preview
+              <i class="fa-solid fa-chevron-down chev"></i>
+            </div>
+            <div class="accordion-body" id="acc-source">
+              <a href="#" class="tj2-btn tj2-btn-navy" style="margin-bottom:14px;"><i class="fa-solid fa-download"></i> Download source file</a>
+              <div style="background:var(--light-mariam);border:1px solid var(--grey-100);border-radius:8px;padding:36px;display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--grey-700);font-size:13px;">
+                <i class="fa-regular fa-file-lines" style="font-size:26px;color:var(--grey-300);margin-bottom:10px;"></i>
+                Document preview — emergency_contacts.docx
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <!-- Claim CTA -->
+          <div class="tj2-card tj2-card-accent">
+            <div style="font-size:11.5px;font-weight:700;color:var(--grey-700);text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;">This task is available</div>
+            <p style="margin:0 0 14px;font-size:13px;color:var(--grey-700);">Claiming this task lets other linguists know it's being worked on and adds it to your My Tasks list.</p>
+            <a href="Task-Claim-Hybrid.html" class="tj2-btn tj2-btn-accent" style="width:100%;">Claim this task</a>
+          </div>
+
+          <div class="tj2-card">
+            <div class="tj2-card-head"><h2 style="font-size:16px;">Project</h2></div>
+            <a href="Project-View-Hybrid.html" style="font-weight:700;">Community Health Guidance — Flood Response</a>
+            <p style="margin:6px 0 0;font-size:12.5px;color:var(--grey-700);">
+              <a href="../NGO/Organization-Hybrid.html" style="color:var(--grey-700);">Refugee Aid NGO</a>
+            </p>
+          </div>
+
+          <div class="tj2-card">
+            <div class="tj2-card-head"><h2 style="font-size:16px;">Users also viewed</h2></div>
+            <div class="also-viewed-card">
+              <a href="#" style="font-weight:700;">faq_appendix.docx</a>
+              <div style="display:flex;gap:5px;margin:6px 0;flex-wrap:wrap;">
+                <span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Translation</span>
+                <span class="tj2-badge-soft">1,780 words</span>
+              </div>
+              <div style="font-size:12px;color:var(--grey-700);">Due Jul 30, 2026 · Cash Assistance FAQ — Round 4</div>
+            </div>
+            <div class="also-viewed-card">
+              <a href="#" style="font-weight:700;">hygiene_kit_instructions.docx</a>
+              <div style="display:flex;gap:5px;margin:6px 0;flex-wrap:wrap;">
+                <span class="tj2-badge tj2-badge-purple">Proofreading</span>
+                <span class="tj2-badge-soft">1,780 words</span>
+              </div>
+              <div style="font-size:12px;color:var(--grey-700);">Due Jul 22, 2026 · Community Health Guidance — Flood Response</div>
+            </div>
+          </div>
+
+          <div class="tj2-card">
+            <div class="tj2-card-head"><h2 style="font-size:16px;">Questions or comments?</h2></div>
+            <a href="#" class="tj2-btn tj2-btn-navy" style="width:100%;"><i class="fa-regular fa-comments"></i> Discuss on Community Forum</a>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjAccordion(id) {
+  const body = document.getElementById(id);
+  const hdr = body.previousElementSibling;
+  const open = body.style.display !== 'none';
+  body.style.display = open ? 'none' : 'block';
+  hdr.classList.toggle('open', !open);
+}
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+function tjToggleGroup(labelEl, listId) {
+  labelEl.classList.toggle('collapsed');
+  document.getElementById(listId).classList.toggle('collapsed');
+}
+</script>
+</body>
+</html>
