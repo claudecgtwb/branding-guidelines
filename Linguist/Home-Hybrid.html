@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/tarjimly-v2-theme.css">
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <!-- Sidebar: TWB Platform (linguist) nav + Resources nav -->
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-sidebar-scroll">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">TWB Platform</div><div class="sub">Linguist</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-twb')"><img src="../assets/images/twb-mark.svg" class="grp-icon" alt="">TWB Platform<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-twb">
+      <li><a href="Home-Hybrid.html" class="active"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="#"><i class="fa-solid fa-list-check fa-fw"></i> Tasks</a></li>
+      <li><a href="#"><i class="fa-solid fa-clipboard-check fa-fw"></i> My Tasks</a></li>
+      <li><a href="#"><i class="fa-solid fa-user fa-fw"></i> Profile</a></li>
+    </ul>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-resources')">Resources<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-resources">
+      <li><a href="#"><i class="fa-solid fa-comments fa-fw"></i> Community Forum</a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning Center</a></li>
+      <li><a href="#"><i class="fa-solid fa-book-open fa-fw"></i> Community Library</a></li>
+      <li><a href="#"><i class="fa-solid fa-compass fa-fw"></i> Platform Tour</a></li>
+    </ul>
+
+    </div>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Maria Kowalski</div><div class="email">maria.k+linguist@refugeeaid.org</div></div>
+      </div>
+      <a href="../Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <!-- Welcome banner -->
+      <div class="tj2-card tj2-card-accent">
+        <h1 class="tj2-h1">Welcome back, Maria</h1>
+        <p style="max-width:640px;font-size:13.5px;color:var(--grey-700);margin-top:8px;">
+          Translators without Borders brings together volunteers from around the globe who offer
+          their time, language skills and voices to help people get vital information and be
+          heard, whatever language they speak.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;">
+          <a href="#" class="tj2-btn tj2-btn-accent">Browse available tasks</a>
+          <a href="#" class="tj2-btn tj2-btn-navy">View my tasks</a>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start;">
+
+        <!-- ============ LEFT COLUMN ============ -->
+        <div>
+
+          <!-- My Tasks -->
+          <div class="tj2-card tj2-card-accent">
+            <div class="tj2-card-head">
+              <h2>My Tasks</h2>
+              <a href="#" style="font-weight:700;font-size:13px;color:var(--twb-accent);">Go to My Tasks <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+
+            <div class="tj2-claim-row">
+              <div style="display:flex;align-items:center;gap:12px;">
+                <img class="tj2-avatar" style="width:52px;height:52px;" src="https://www.gravatar.com/avatar/1?d=identicon&s=104" alt="">
+                <div>
+                  <div style="font-weight:700;">rights_and_services.docx <span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Translation</span></div>
+                  <div style="font-size:12.5px;color:var(--grey-700);">English → Swahili | (In Progress)</div>
+                </div>
+              </div>
+              <div style="font-size:12.5px;font-weight:600;color:var(--danger);">Due Jul 17, 2026</div>
+            </div>
+            <div class="tj2-claim-row">
+              <div style="display:flex;align-items:center;gap:12px;">
+                <img class="tj2-avatar" style="width:52px;height:52px;" src="https://www.gravatar.com/avatar/2?d=identicon&s=104" alt="">
+                <div>
+                  <div style="font-weight:700;">hygiene_kit_instructions.docx <span class="tj2-badge-purple tj2-badge">Proofreading</span></div>
+                  <div style="font-size:12.5px;color:var(--grey-700);">English → Arabic | (Claimed)</div>
+                </div>
+              </div>
+              <div style="font-size:12.5px;font-weight:600;color:var(--danger);">Due Jul 22, 2026</div>
+            </div>
+          </div>
+
+          <!-- Available Tasks -->
+          <div class="tj2-card tj2-card-blue">
+            <div class="tj2-card-head">
+              <h2>Available Tasks</h2>
+              <a href="#" style="font-weight:700;font-size:13px;color:var(--core-blue);">Browse All Tasks <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+              <div class="tj2-task-card">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+                  <div>
+                    <span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Translation</span>
+                    <span class="tj2-badge-soft" style="margin-left:4px;">860 words</span>
+                  </div>
+                  <img class="tj2-avatar" style="width:44px;height:44px;" src="https://www.gravatar.com/avatar/3?d=identicon&s=88" alt="">
+                </div>
+                <h3><a href="#">emergency_contacts.docx</a></h3>
+                <p style="font-size:12.5px;color:var(--grey-700);margin:0 0 10px;">Languages: English → Swahili</p>
+                <p style="font-size:12px;font-weight:700;color:var(--danger);margin:0 0 12px;">Due Aug 01, 2026</p>
+                <a href="#" class="tj2-btn tj2-btn-navy">View Task</a>
+              </div>
+              <div class="tj2-task-card">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+                  <div>
+                    <span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Translation</span>
+                    <span class="tj2-badge-soft" style="margin-left:4px;">1,780 words</span>
+                    <span class="tj2-badge tj2-badge-purple" style="margin-left:4px;">Part 1/2</span>
+                  </div>
+                  <img class="tj2-avatar" style="width:44px;height:44px;" src="https://www.gravatar.com/avatar/4?d=identicon&s=88" alt="">
+                </div>
+                <h3><a href="#">faq_appendix.docx</a></h3>
+                <p style="font-size:12.5px;color:var(--grey-700);margin:0 0 10px;">Languages: English → Hausa</p>
+                <p style="font-size:12px;font-weight:700;color:var(--danger);margin:0 0 12px;">Due Jul 30, 2026</p>
+                <a href="#" class="tj2-btn tj2-btn-navy">View Task</a>
+              </div>
+            </div>
+
+            <div style="text-align:center;margin-top:18px;">
+              <a href="#" class="tj2-btn tj2-btn-navy">View More Available Tasks</a>
+            </div>
+          </div>
+
+          <!-- Why volunteer with TWB -->
+          <div class="tj2-card">
+            <div class="tj2-card-head">
+              <h2>Why volunteer with TWB</h2>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;">
+              <a href="#" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;text-align:center;padding:10px;border-radius:10px;">
+                <div style="width:48px;height:48px;border-radius:50%;background:var(--navy-soft);color:var(--core-blue);display:flex;align-items:center;justify-content:center;font-size:18px;"><i class="fa-solid fa-comments"></i></div>
+                <h3 style="font-size:14.5px;font-weight:800;margin:10px 0 6px;color:var(--dark-mariam);">Connect</h3>
+                <p style="font-size:12.5px;color:var(--grey-700);margin:0;">Meet other linguists from around the world in the TWB Community Forum and chat with TWB staff.</p>
+              </a>
+              <a href="#" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;text-align:center;padding:10px;border-radius:10px;">
+                <div style="width:48px;height:48px;border-radius:50%;background:var(--navy-soft);color:var(--core-blue);display:flex;align-items:center;justify-content:center;font-size:18px;"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3 style="font-size:14.5px;font-weight:800;margin:10px 0 6px;color:var(--dark-mariam);">Learn</h3>
+                <p style="font-size:12.5px;color:var(--grey-700);margin:0;">Take courses on translation in the humanitarian field and get feedback from senior linguists.</p>
+              </a>
+              <a href="#" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;text-align:center;padding:10px;border-radius:10px;">
+                <div style="width:48px;height:48px;border-radius:50%;background:var(--navy-soft);color:var(--core-blue);display:flex;align-items:center;justify-content:center;font-size:18px;"><i class="fa-solid fa-seedling"></i></div>
+                <h3 style="font-size:14.5px;font-weight:800;margin:10px 0 6px;color:var(--dark-mariam);">Grow</h3>
+                <p style="font-size:12.5px;color:var(--grey-700);margin:0;">Receive public acknowledgement of your contributions and build out your resume.</p>
+              </a>
+              <a href="#" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;text-align:center;padding:10px;border-radius:10px;">
+                <div style="width:48px;height:48px;border-radius:50%;background:var(--navy-soft);color:var(--core-blue);display:flex;align-items:center;justify-content:center;font-size:18px;"><i class="fa-solid fa-earth-americas"></i></div>
+                <h3 style="font-size:14.5px;font-weight:800;margin:10px 0 6px;color:var(--dark-mariam);">Impact</h3>
+                <p style="font-size:12.5px;color:var(--grey-700);margin:0;">Translate humanitarian content and help communities get information in the language they speak.</p>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ============ RIGHT COLUMN ============ -->
+        <div>
+
+          <!-- Resources -->
+          <div class="tj2-card">
+            <div class="tj2-card-head" style="border-bottom:1px solid var(--grey-100);">
+              <h2 style="font-size:17px;"><span style="color:var(--core-blue);">📖</span> Resources</h2>
+            </div>
+            <a href="#" class="tj2-list-item" style="align-items:center;text-decoration:none;color:inherit;">
+              <span style="color:var(--core-blue);opacity:.6;">→</span>
+              <div class="title">Community Forum</div>
+            </a>
+            <a href="#" class="tj2-list-item" style="align-items:center;text-decoration:none;color:inherit;">
+              <span style="color:var(--core-blue);opacity:.6;">→</span>
+              <div class="title">Learning Center</div>
+            </a>
+            <a href="#" class="tj2-list-item" style="align-items:center;text-decoration:none;color:inherit;">
+              <span style="color:var(--core-blue);opacity:.6;">→</span>
+              <div class="title">Community Library</div>
+            </a>
+            <a href="#" class="tj2-list-item" style="align-items:center;border-bottom:none;text-decoration:none;color:inherit;">
+              <span style="color:var(--core-blue);opacity:.6;">→</span>
+              <div class="title">Platform Tour</div>
+            </a>
+          </div>
+
+          <!-- Feedback -->
+          <div class="tj2-card tj2-card-blue">
+            <h3 style="font-size:16px;font-weight:800;margin:0 0 8px;">Feedback &amp; Suggestions</h3>
+            <p style="font-size:13px;color:var(--grey-700);margin:0 0 14px;">Please share your feedback with our team to help fix any issues and deliver a better experience to our community.</p>
+            <a href="#" class="tj2-btn tj2-btn-accent">💡 Submit Feedback</a>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+function tjToggleGroup(labelEl, listId) {
+  labelEl.classList.toggle('collapsed');
+  document.getElementById(listId).classList.toggle('collapsed');
+}
+</script>
+</body>
+</html>
