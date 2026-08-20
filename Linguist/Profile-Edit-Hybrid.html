@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edit Profile · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/tarjimly-v2-theme.css">
+<style>
+.pair-row { display: grid; grid-template-columns: 1fr 1fr 1fr 32px; gap: 10px; align-items: center; margin-bottom: 10px; }
+.expertise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; }
+.checkbox-row { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+@media (max-width: 620px) { .pair-row, .expertise-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-sidebar-scroll">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">TWB Platform</div><div class="sub">Linguist</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-twb')"><img src="../assets/images/twb-mark.svg" class="grp-icon" alt="">TWB Platform<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-twb">
+      <li><a href="Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="Recent-Tasks-Hybrid.html"><i class="fa-solid fa-list-check fa-fw"></i> Tasks</a></li>
+      <li><a href="#"><i class="fa-solid fa-clipboard-check fa-fw"></i> My Tasks</a></li>
+      <li><a href="Profile-Edit-Hybrid.html" class="active"><i class="fa-solid fa-user fa-fw"></i> Profile</a></li>
+    </ul>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-resources')">Resources<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-resources">
+      <li><a href="#"><i class="fa-solid fa-comments fa-fw"></i> Community Forum</a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning Center</a></li>
+      <li><a href="#"><i class="fa-solid fa-book-open fa-fw"></i> Community Library</a></li>
+      <li><a href="#"><i class="fa-solid fa-compass fa-fw"></i> Platform Tour</a></li>
+    </ul>
+
+    </div>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Maria Kowalski</div><div class="email">maria.k+linguist@refugeeaid.org</div></div>
+      </div>
+      <a href="../Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content" style="max-width:760px;">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <div class="tj2-page-head">
+        <div>
+          <h1 class="tj2-h1">Edit Profile</h1>
+          <p>Keep your details up to date so organisations and project officers know who they're working with.</p>
+        </div>
+        <a href="Profile-Hybrid.html" class="tj2-btn tj2-btn-outline"><i class="fa-solid fa-eye"></i> View public profile</a>
+      </div>
+
+      <div class="tj2-tabs" role="tablist">
+        <button type="button" class="tj2-tab active" data-tab="personal" onclick="tjShowTab('personal')">Personal</button>
+        <button type="button" class="tj2-tab" data-tab="language" onclick="tjShowTab('language')">Language &amp; Skills</button>
+        <button type="button" class="tj2-tab" data-tab="certs" onclick="tjShowTab('certs')">Certifications</button>
+      </div>
+
+      <!-- ============ PERSONAL ============ -->
+      <div class="tj2-tab-panel active" id="panel-personal">
+        <div class="tj2-card">
+          <div class="tj2-row-2">
+            <div class="tj2-field">
+              <label class="tj2-label">Display Name<span class="req">*</span></label>
+              <input class="tj2-input" value="Maria Kowalski">
+            </div>
+            <div class="tj2-field">
+              <label class="tj2-label">City</label>
+              <input class="tj2-input" value="Kraków">
+            </div>
+          </div>
+          <div class="tj2-row-2">
+            <div class="tj2-field">
+              <label class="tj2-label">First Name<span class="req">*</span></label>
+              <input class="tj2-input" value="Maria">
+            </div>
+            <div class="tj2-field">
+              <label class="tj2-label">Last Name<span class="req">*</span></label>
+              <input class="tj2-input" value="Kowalski">
+            </div>
+          </div>
+          <div class="tj2-field">
+            <label class="tj2-label">Country</label>
+            <select class="tj2-select">
+              <option>Poland</option>
+              <option>France</option>
+              <option>Kenya</option>
+            </select>
+          </div>
+          <div class="tj2-field">
+            <label style="display:flex;align-items:center;gap:10px;">
+              <span class="tj2-switch"><input type="checkbox" checked><span class="slider"></span></span>
+              <span style="font-size:13px;">Make my info visible (name and profile shown to organisations)</span>
+            </label>
+          </div>
+          <div class="tj2-field">
+            <label class="tj2-label">About me</label>
+            <textarea class="tj2-textarea">Freelance translator and former ESL teacher with six years of experience translating educational and public-health materials.</textarea>
+          </div>
+          <div class="tj2-row-2">
+            <div class="tj2-field">
+              <label class="tj2-label"><i class="fa-brands fa-linkedin"></i> LinkedIn</label>
+              <input class="tj2-input" placeholder="https://linkedin.com/in/…">
+            </div>
+            <div class="tj2-field">
+              <label class="tj2-label"><i class="fa-brands fa-x-twitter"></i> Twitter / X</label>
+              <input class="tj2-input" placeholder="https://x.com/…">
+            </div>
+          </div>
+          <div class="tj2-field">
+            <label style="display:flex;align-items:center;gap:10px;">
+              <span class="tj2-switch"><input type="checkbox" checked><span class="slider"></span></span>
+              <span style="font-size:13px;">Subscribe to news &amp; updates from TWB</span>
+            </label>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:20px;">
+            <button type="button" class="tj2-btn tj2-btn-sm" style="background:#fdecea;color:var(--danger);">Delete account</button>
+            <button type="button" class="tj2-btn tj2-btn-accent" onclick="tjShowTab('language')">Next page <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ LANGUAGE & SKILLS ============ -->
+      <div class="tj2-tab-panel" id="panel-language">
+        <div class="tj2-card">
+          <div class="tj2-row-2">
+            <div class="tj2-field">
+              <label class="tj2-label">Native Language</label>
+              <select class="tj2-select"><option>Polish</option><option>English</option><option>French</option></select>
+            </div>
+            <div class="tj2-field">
+              <label class="tj2-label">Native Country / Variant</label>
+              <select class="tj2-select"><option>Poland</option></select>
+            </div>
+          </div>
+
+          <div class="tj2-field">
+            <label class="tj2-label">Language pairs</label>
+            <div class="pair-row" style="font-size:11px;font-weight:700;color:var(--grey-700);text-transform:uppercase;">
+              <span>From</span><span>To</span><span>Qualification</span><span></span>
+            </div>
+            <div class="pair-row">
+              <select class="tj2-select"><option>English</option></select>
+              <select class="tj2-select"><option>Swahili</option></select>
+              <select class="tj2-select"><option>Level 2 — Intermediate</option><option>Level 1 — Beginner</option><option>Level 3 — Expert</option></select>
+              <button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm" style="padding:6px 8px;" aria-label="Remove pair"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="pair-row">
+              <select class="tj2-select"><option>English</option></select>
+              <select class="tj2-select"><option>French</option></select>
+              <select class="tj2-select"><option>Level 2 — Intermediate</option><option>Level 1 — Beginner</option><option>Level 3 — Expert</option></select>
+              <button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm" style="padding:6px 8px;" aria-label="Remove pair"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-plus"></i> Add language pair</button>
+          </div>
+
+          <div class="tj2-field">
+            <label class="tj2-label">How often would you like to receive task notifications?</label>
+            <select class="tj2-select">
+              <option>Daily</option>
+              <option>Weekly</option>
+              <option>Monthly</option>
+              <option>Never</option>
+            </select>
+          </div>
+
+          <div class="tj2-field">
+            <label class="tj2-label">Services I offer</label>
+            <div class="expertise-grid">
+              <label class="checkbox-row"><input type="checkbox" checked> Translation</label>
+              <label class="checkbox-row"><input type="checkbox" checked> Proofreading</label>
+              <label class="checkbox-row"><input type="checkbox"> Transcription</label>
+              <label class="checkbox-row"><input type="checkbox"> Voice recording</label>
+              <label class="checkbox-row"><input type="checkbox"> Subtitling</label>
+              <label class="checkbox-row"><input type="checkbox"> Terminology</label>
+            </div>
+          </div>
+
+          <div class="tj2-field">
+            <label class="tj2-label">Fields of expertise</label>
+            <div class="expertise-grid">
+              <label class="checkbox-row"><input type="checkbox" checked> Public health</label>
+              <label class="checkbox-row"><input type="checkbox" checked> Education</label>
+              <label class="checkbox-row"><input type="checkbox" checked> Emergency response</label>
+              <label class="checkbox-row"><input type="checkbox"> Legal</label>
+              <label class="checkbox-row"><input type="checkbox"> Technology</label>
+              <label class="checkbox-row"><input type="checkbox"> Agriculture</label>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;margin-top:20px;">
+            <button type="button" class="tj2-btn tj2-btn-outline" onclick="tjShowTab('personal')"><i class="fa-solid fa-arrow-left"></i> Previous page</button>
+            <button type="button" class="tj2-btn tj2-btn-accent" onclick="tjShowTab('certs')">Next page <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ CERTIFICATIONS ============ -->
+      <div class="tj2-tab-panel" id="panel-certs">
+        <div class="tj2-card">
+          <p style="margin:0 0 16px;font-size:13px;color:var(--grey-700);">Upload certification documents to help organisations verify your qualifications. Submissions are reviewed by the TWB team.</p>
+
+          <div class="cert-upload-row" style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-100);">
+            <span style="font-size:13.5px;font-weight:600;">Certified Translator Credential</span>
+            <span class="tj2-badge" style="background:#e9f7e8;color:var(--success);">Submitted &amp; reviewed</span>
+          </div>
+          <div class="cert-upload-row" style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-100);">
+            <span style="font-size:13.5px;font-weight:600;">University Language Degree</span>
+            <a href="#" class="tj2-btn tj2-btn-outline tj2-btn-sm">Upload file</a>
+          </div>
+          <div class="cert-upload-row" style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;">
+            <span style="font-size:13.5px;font-weight:600;">Professional Reference Letter</span>
+            <a href="#" class="tj2-btn tj2-btn-outline tj2-btn-sm">Upload file</a>
+          </div>
+
+          <div class="tj2-field" style="margin-top:16px;">
+            <label class="tj2-label">Other certifications</label>
+            <textarea class="tj2-textarea" placeholder="Tell us about any other relevant certifications you hold…"></textarea>
+            <a href="#" class="tj2-btn tj2-btn-outline tj2-btn-sm" style="margin-top:10px;"><i class="fa-solid fa-upload"></i> Upload file</a>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;margin-top:20px;">
+            <button type="button" class="tj2-btn tj2-btn-outline" onclick="tjShowTab('language')"><i class="fa-solid fa-arrow-left"></i> Previous page</button>
+            <button type="button" class="tj2-btn tj2-btn-accent"><i class="fa-solid fa-check"></i> Complete</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+function tjToggleGroup(labelEl, listId) {
+  labelEl.classList.toggle('collapsed');
+  document.getElementById(listId).classList.toggle('collapsed');
+}
+function tjShowTab(name) {
+  document.querySelectorAll('.tj2-tab').forEach(function (el) {
+    el.classList.toggle('active', el.dataset.tab === name);
+  });
+  document.querySelectorAll('.tj2-tab-panel').forEach(function (el) {
+    el.classList.toggle('active', el.id === 'panel-' + name);
+  });
+}
+</script>
+</body>
+</html>

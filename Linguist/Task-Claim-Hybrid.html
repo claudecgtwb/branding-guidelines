@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claim Task · emergency_contacts.docx · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/tarjimly-v2-theme.css">
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-sidebar-scroll">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">TWB Platform</div><div class="sub">Linguist</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-twb')"><img src="../assets/images/twb-mark.svg" class="grp-icon" alt="">TWB Platform<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-twb">
+      <li><a href="Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="Recent-Tasks-Hybrid.html" class="active"><i class="fa-solid fa-list-check fa-fw"></i> Tasks</a></li>
+      <li><a href="#"><i class="fa-solid fa-clipboard-check fa-fw"></i> My Tasks</a></li>
+      <li><a href="Profile-Edit-Hybrid.html"><i class="fa-solid fa-user fa-fw"></i> Profile</a></li>
+    </ul>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-resources')">Resources<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-resources">
+      <li><a href="#"><i class="fa-solid fa-comments fa-fw"></i> Community Forum</a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning Center</a></li>
+      <li><a href="#"><i class="fa-solid fa-book-open fa-fw"></i> Community Library</a></li>
+      <li><a href="#"><i class="fa-solid fa-compass fa-fw"></i> Platform Tour</a></li>
+    </ul>
+
+    </div>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Maria Kowalski</div><div class="email">maria.k+linguist@refugeeaid.org</div></div>
+      </div>
+      <a href="../Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content" style="max-width:820px;">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <div class="tj2-breadcrumb">
+        <a href="Home-Hybrid.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:9px;margin:0 4px;"></i>
+        <a href="Task-View-Hybrid.html">Task</a> <i class="fa-solid fa-chevron-right" style="font-size:9px;margin:0 4px;"></i>
+        <span style="color:var(--dark-mariam);font-weight:600;">Claim</span>
+      </div>
+
+      <div class="tj2-page-head">
+        <div>
+          <h1 class="tj2-h1">emergency_contacts.docx</h1>
+        </div>
+      </div>
+
+      <p style="margin:-8px 0 16px;font-size:12.5px;color:var(--grey-700);">
+        This mockup shows the claim flow for each task type this task could be. In the built platform, only the tab matching the task's actual type would appear.
+      </p>
+
+      <div class="tj2-tabs" role="tablist">
+        <button type="button" class="tj2-tab active" data-tab="translate" onclick="tjShowTab('translate')"><span class="tj2-badge" style="background:var(--core-blue);color:#fff;margin-right:6px;">Translation</span> Translate</button>
+        <button type="button" class="tj2-tab" data-tab="revise" onclick="tjShowTab('revise')"><span class="tj2-badge tj2-badge-purple" style="margin-right:6px;">Revision</span> Revise</button>
+        <button type="button" class="tj2-tab" data-tab="proofread" onclick="tjShowTab('proofread')"><span class="tj2-badge" style="background:var(--twb-accent);color:#fff;margin-right:6px;">Approval</span> Proofread</button>
+      </div>
+
+      <!-- ============ TRANSLATE ============ -->
+      <div class="tj2-tab-panel active" id="panel-translate">
+        <div class="tj2-card">
+          <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:24px;align-items:center;">
+            <div>
+              <h2 style="font-size:19px;">Do you want to translate this file?</h2>
+              <ul style="margin:14px 0;padding-left:20px;color:var(--grey-700);font-size:13.5px;line-height:1.7;">
+                <li>Will you have enough time to translate this file? Check how long the file is.</li>
+                <li>Do you think you are capable of translating this file to <strong>Swahili</strong>?</li>
+                <li>If you select "View Task on Kató TM" or "Download File," please only start editing after you click "Yes, I promise I will translate this file."</li>
+              </ul>
+              <a href="#" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-download"></i> Download original file in its source language</a>
+            </div>
+            <div style="background:var(--light-mariam);border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-solid fa-language" style="font-size:48px;color:var(--core-blue);opacity:.5;"></i>
+            </div>
+          </div>
+          <hr style="border-color:var(--grey-100);margin:20px 0;">
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <a href="Task-Claimed-Hybrid.html" class="tj2-btn tj2-btn-accent"><i class="fa-solid fa-check"></i> Yes, I promise I will translate this file</a>
+            <a href="Task-View-Hybrid.html" class="tj2-btn tj2-btn-outline">Just bring me back to the task page</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ REVISE (task type: Proofreading) ============ -->
+      <div class="tj2-tab-panel" id="panel-revise">
+        <div class="tj2-card">
+          <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:24px;align-items:center;">
+            <div>
+              <h2 style="font-size:19px;">Do you want to revise this file?</h2>
+              <ol style="margin:14px 0;padding-left:20px;color:var(--grey-700);font-size:13.5px;line-height:1.7;">
+                <li>Will you have enough time to revise this file? Check how long the file is.</li>
+                <li>Do you think you are capable of revising a file in <strong>Swahili</strong>?</li>
+                <li>Also please note that you must wait for translation to be complete (100% translated) before starting revising.</li>
+              </ol>
+              <a href="#" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-download"></i> Download original file in its source language</a>
+            </div>
+            <div style="background:var(--light-mariam);border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-solid fa-spell-check" style="font-size:48px;color:var(--purple-chunk);opacity:.5;"></i>
+            </div>
+          </div>
+          <hr style="border-color:var(--grey-100);margin:20px 0;">
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <a href="Task-Claimed-Hybrid.html" class="tj2-btn tj2-btn-accent"><i class="fa-solid fa-check"></i> Yes, I promise I will revise this file</a>
+            <a href="Task-View-Hybrid.html" class="tj2-btn tj2-btn-outline">Just bring me back to the task page</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ PROOFREAD (task type: Approval) ============ -->
+      <div class="tj2-tab-panel" id="panel-proofread">
+        <div class="tj2-card">
+          <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:24px;align-items:center;">
+            <div>
+              <h2 style="font-size:19px;">Do you want to proofread this file?</h2>
+              <ol style="margin:14px 0;padding-left:20px;color:var(--grey-700);font-size:13.5px;line-height:1.7;">
+                <li>Will you have enough time to proofread this file? Check how long the file is.</li>
+                <li>Do you think you are capable of proofreading a file in <strong>Swahili</strong>?</li>
+                <li>Also please note that you must wait for translation/revision to be complete (100% translated/revised) before starting proofreading.</li>
+              </ol>
+              <a href="#" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-download"></i> Download original file in its source language</a>
+            </div>
+            <div style="background:var(--light-mariam);border-radius:12px;padding:30px;display:flex;align-items:center;justify-content:center;">
+              <i class="fa-solid fa-stamp" style="font-size:48px;color:var(--twb-accent);opacity:.5;"></i>
+            </div>
+          </div>
+          <hr style="border-color:var(--grey-100);margin:20px 0;">
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <a href="Task-Claimed-Hybrid.html" class="tj2-btn tj2-btn-accent"><i class="fa-solid fa-check"></i> Yes, I promise I will proofread this file</a>
+            <a href="Task-View-Hybrid.html" class="tj2-btn tj2-btn-outline">Just bring me back to the task page</a>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+function tjToggleGroup(labelEl, listId) {
+  labelEl.classList.toggle('collapsed');
+  document.getElementById(listId).classList.toggle('collapsed');
+}
+function tjShowTab(name) {
+  document.querySelectorAll('.tj2-tab').forEach(function (el) {
+    el.classList.toggle('active', el.dataset.tab === name);
+  });
+  document.querySelectorAll('.tj2-tab-panel').forEach(function (el) {
+    el.classList.toggle('active', el.id === 'panel-' + name);
+  });
+}
+</script>
+</body>
+</html>
