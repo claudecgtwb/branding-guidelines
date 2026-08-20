@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Available Tasks · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/tarjimly-v2-theme.css">
+<style>
+.stream-task-card { background: #fff; border: 1px solid var(--grey-100); border-radius: var(--radius-sm); padding: 16px 18px; margin-bottom: 14px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.stream-task-card .rt-badges { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0; }
+.stream-task-card .rt-meta { font-size: 12.5px; color: var(--grey-700); }
+.pagination-bar { display: flex; justify-content: center; align-items: center; gap: 18px; margin-top: 22px; font-size: 13px; }
+.pagination-bar a { color: var(--core-blue); font-weight: 700; text-decoration: none; }
+.pagination-bar span { color: var(--grey-700); }
+</style>
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-sidebar-scroll">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">TWB Platform</div><div class="sub">Linguist</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-twb')"><img src="../assets/images/twb-mark.svg" class="grp-icon" alt="">TWB Platform<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-twb">
+      <li><a href="Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="Task-Stream-Hybrid.html" class="active"><i class="fa-solid fa-list-check fa-fw"></i> Tasks</a></li>
+      <li><a href="Task-Claimed-Hybrid.html"><i class="fa-solid fa-clipboard-check fa-fw"></i> My Tasks</a></li>
+      <li><a href="Profile-Hybrid.html"><i class="fa-solid fa-user fa-fw"></i> Profile</a></li>
+    </ul>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-resources')">Resources<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-resources">
+      <li><a href="#"><i class="fa-solid fa-comments fa-fw"></i> Community Forum</a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning Center</a></li>
+      <li><a href="#"><i class="fa-solid fa-book-open fa-fw"></i> Community Library</a></li>
+      <li><a href="#"><i class="fa-solid fa-compass fa-fw"></i> Platform Tour</a></li>
+    </ul>
+
+    </div>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Maria Kowalski</div><div class="email">maria.k+linguist@refugeeaid.org</div></div>
+      </div>
+      <a href="../Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <div class="tj2-breadcrumb">
+        <a href="Home-Hybrid.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size:9px;margin:0 4px;"></i>
+        <span style="color:var(--dark-mariam);font-weight:600;">Tasks</span>
+      </div>
+
+      <div class="tj2-page-head">
+        <div><h1 class="tj2-h1">Available Tasks</h1></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:start;">
+
+        <!-- ============ FILTER PANEL ============ -->
+        <div class="tj2-card">
+          <h2 style="font-size:14.5px;margin:0 0 8px;">Filter available tasks</h2>
+          <p style="font-size:12px;color:var(--grey-700);margin:0 0 16px;">You can only filter for languages that you have chosen as your language pairs in your profile.</p>
+
+          <div class="tj2-field">
+            <label class="tj2-label">Task type</label>
+            <select class="tj2-select">
+              <option>Any task type</option>
+              <option>Translation</option>
+              <option>Proofreading</option>
+              <option>Proofreading and Approval</option>
+            </select>
+          </div>
+
+          <div class="tj2-field">
+            <label class="tj2-label">Language pair</label>
+            <select class="tj2-select">
+              <option>Any language pair</option>
+              <option>English to Swahili</option>
+              <option>English to Arabic</option>
+              <option>English to French</option>
+              <option>English to Hausa</option>
+            </select>
+          </div>
+
+          <button type="button" class="tj2-btn tj2-btn-accent" style="width:100%;"><i class="fa-solid fa-sliders"></i> Apply filters</button>
+        </div>
+
+        <!-- ============ TASK LIST ============ -->
+        <div>
+          <div style="display:flex;justify-content:flex-end;margin-bottom:14px;">
+            <a href="Recent-Tasks-Hybrid.html" class="tj2-btn tj2-btn-navy">Recently viewed tasks</a>
+          </div>
+
+          <div class="stream-task-card">
+            <div style="flex:1;min-width:220px;">
+              <a href="Task-View-Hybrid.html" style="font-weight:700;font-size:14.5px;">emergency_contacts.docx</a>
+              <div class="rt-badges">
+                <span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Translation</span>
+                <span class="tj2-badge-soft">860 words</span>
+              </div>
+              <div class="rt-meta">Languages: <strong>English</strong> <i class="fa-solid fa-arrow-right" style="font-size:9px;"></i> <strong>Swahili</strong></div>
+              <div class="rt-meta">Due Aug 01, 2026 · Community Health Guidance — Flood Response</div>
+            </div>
+            <div style="align-self:center;">
+              <a href="Task-View-Hybrid.html" class="tj2-btn tj2-btn-navy">View Task</a>
+            </div>
+          </div>
+
+          <div class="stream-task-card">
+            <div style="flex:1;min-width:220px;">
+              <a href="Task-View-Hybrid.html" style="font-weight:700;font-size:14.5px;">faq_appendix.docx</a>
+              <div class="rt-badges">
+                <span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Translation</span>
+                <span class="tj2-badge-soft">1,780 words</span>
+                <span class="tj2-badge tj2-badge-purple">Part 1/2</span>
+              </div>
+              <div class="rt-meta">Languages: <strong>English</strong> <i class="fa-solid fa-arrow-right" style="font-size:9px;"></i> <strong>Hausa</strong></div>
+              <div class="rt-meta">Due Jul 30, 2026 · Cash Assistance FAQ — Round 4</div>
+            </div>
+            <div style="align-self:center;">
+              <a href="Task-View-Hybrid.html" class="tj2-btn tj2-btn-navy">View Task</a>
+            </div>
+          </div>
+
+          <div class="stream-task-card">
+            <div style="flex:1;min-width:220px;">
+              <a href="Task-View-Hybrid.html" style="font-weight:700;font-size:14.5px;">hygiene_kit_instructions.docx</a>
+              <div class="rt-badges">
+                <span class="tj2-badge tj2-badge-purple">Proofreading</span>
+                <span class="tj2-badge-soft">1,780 words</span>
+              </div>
+              <div class="rt-meta">Languages: <strong>English</strong> <i class="fa-solid fa-arrow-right" style="font-size:9px;"></i> <strong>Arabic</strong></div>
+              <div class="rt-meta">Due Jul 22, 2026 · Community Health Guidance — Flood Response</div>
+            </div>
+            <div style="align-self:center;">
+              <a href="Task-View-Hybrid.html" class="tj2-btn tj2-btn-navy">View Task</a>
+            </div>
+          </div>
+
+          <div class="pagination-bar" id="ias-pagination">
+            <span style="color:var(--grey-300);">« First</span>
+            <span style="color:var(--grey-300);">‹ Prev</span>
+            <span style="font-weight:700;color:var(--core-blue);">1</span>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">Next ›</a>
+            <a href="#">Last »</a>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+function tjToggleGroup(labelEl, listId) {
+  labelEl.classList.toggle('collapsed');
+  document.getElementById(listId).classList.toggle('collapsed');
+}
+</script>
+</body>
+</html>
