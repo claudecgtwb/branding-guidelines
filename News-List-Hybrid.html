@@ -11,7 +11,8 @@
 <style>
 .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .news-card { background: #fff; border: 1px solid var(--grey-100); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
-.news-thumb { aspect-ratio: 3/2; background: var(--light-mariam); display: flex; align-items: center; justify-content: center; color: var(--grey-300); font-size: 30px; }
+.news-card > a { display: block; }
+.news-thumb { width: 100%; aspect-ratio: 3/2; background: var(--light-mariam); display: flex; align-items: center; justify-content: center; color: var(--grey-300); font-size: 30px; }
 .news-body { padding: 18px; flex: 1; display: flex; flex-direction: column; }
 .news-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .news-title { font-size: 15px; font-weight: 800; color: var(--dark-mariam); line-height: 1.35; margin-bottom: 8px; }
@@ -69,13 +70,6 @@
     <main class="tj2-content">
 
       <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
-
-      <nav class="tj2-subnav">
-        <a href="Dashboard-Home-Hybrid.html">Home</a>
-        <a href="Org-Projects-Hybrid.html">Projects</a>
-        <a href="#" class="active">News &amp; updates</a>
-        <a href="#">Learning center</a>
-      </nav>
 
       <a href="Dashboard-Home-Hybrid.html" style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:13px;margin-bottom:14px;"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</a>
 

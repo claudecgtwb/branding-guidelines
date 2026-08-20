@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manage Subscriptions · Refugee Aid NGO · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/tarjimly-v2-theme.css">
+<style>
+  .sub-select { width: 100%; min-width: 160px; border: 1.5px solid var(--grey-100); border-radius: 8px; padding: 8px 10px; font-family: var(--sans); font-size: 12.5px; color: var(--dark-mariam); background: #fff; }
+</style>
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-sidebar-scroll">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">Refugee Aid NGO</div><div class="sub">Organization · Admin</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-tarjimly')"><img src="assets/images/tarjimly-icon.svg" class="grp-icon" alt="">Tarjimly<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-tarjimly">
+      <li><a href="Text-Translations-Hybrid.html"><i class="fa-solid fa-language fa-fw"></i> Text translations</a></li>
+      <li><a href="Call-Interpreters-Hybrid.html"><i class="fa-solid fa-phone fa-fw"></i> Call interpreters</a></li>
+    </ul>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-twb')"><img src="assets/images/twb-mark.svg" class="grp-icon" alt="">TWB Platform<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-twb">
+      <li><a href="Dashboard-Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="Org-Projects-Hybrid.html"><i class="fa-solid fa-diagram-project fa-fw"></i> Projects <span class="count">4</span></a></li>
+      <li><a href="News-List-Hybrid.html"><i class="fa-solid fa-newspaper fa-fw"></i> News &amp; updates <span class="count">2</span></a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning center</a></li>
+    </ul>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-org')">Organization<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-org">
+      <li><a href="Organization-Hybrid.html"><i class="fa-solid fa-building fa-fw"></i> NGO Profile</a></li>
+      <li><a href="Billing-Hybrid.html"><i class="fa-solid fa-file-invoice-dollar fa-fw"></i> Billing</a></li>
+      <li><a href="Manage-Users-Hybrid.html" class="active"><i class="fa-solid fa-users fa-fw"></i> Manage users</a></li>
+    </ul>
+
+    </div>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Samira Al-Ahmad</div><div class="email">samira@refugeeaid.org</div></div>
+      </div>
+      <a href="Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <div class="tj2-breadcrumb">
+        <a href="Manage-Users-Hybrid.html">Manage Users</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:9px;margin:0 4px;"></i>
+        <span style="color:var(--dark-mariam);font-weight:600;">Manage Subscriptions</span>
+      </div>
+
+      <div class="tj2-page-head">
+        <div><h1 class="tj2-h1">Manage Subscriptions</h1></div>
+      </div>
+
+      <div class="tj2-card" style="padding:0;">
+        <div class="tj2-table-wrap">
+          <table class="tj2-table">
+            <thead>
+              <tr>
+                <th style="width:180px;">Name</th>
+                <th>Email Address</th>
+                <th>Existing Subscription</th>
+                <th>Add-Ons</th>
+                <th>New Subscription</th>
+                <th>New Add-Ons</th>
+                <th>Payment Status</th>
+                <th style="text-align:right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight:600;"><i class="fa-solid fa-circle-user" style="margin-right:8px;color:var(--grey-700);"></i>Samira Al-Ahmad</td>
+                <td>samira@refugeeaid.org</td>
+                <td><span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Premium</span></td>
+                <td><span class="tj2-badge tj2-badge-outline">Hotline</span></td>
+                <td>
+                  <select class="sub-select">
+                    <option>No change</option>
+                    <option>Tarjimly Essentials</option>
+                    <option selected>Tarjimly Premium &mdash; $25/mo</option>
+                    <option>Tarjimly Sponsored &mdash; $10/mo</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="sub-select">
+                    <option>None</option>
+                    <option selected>Professional Interpreters</option>
+                  </select>
+                </td>
+                <td><span class="tj2-badge tj2-badge-success">active</span></td>
+                <td style="text-align:right;"><button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-ellipsis"></i></button></td>
+              </tr>
+              <tr>
+                <td style="font-weight:600;"><i class="fa-solid fa-circle-user" style="margin-right:8px;color:var(--grey-700);"></i>Karim Nasser</td>
+                <td>karim@refugeeaid.org</td>
+                <td><span class="tj2-badge" style="background:var(--core-blue);color:#fff;">Premium</span></td>
+                <td><span style="font-size:12.5px;color:var(--grey-700);">&mdash;</span></td>
+                <td>
+                  <select class="sub-select">
+                    <option selected>No change</option>
+                    <option>Tarjimly Essentials</option>
+                    <option>Tarjimly Premium &mdash; $25/mo</option>
+                    <option>Tarjimly Sponsored &mdash; $10/mo</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="sub-select">
+                    <option selected>None</option>
+                    <option>Professional Interpreters</option>
+                  </select>
+                </td>
+                <td><span class="tj2-badge tj2-badge-success">active</span></td>
+                <td style="text-align:right;"><button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-ellipsis"></i></button></td>
+              </tr>
+              <tr>
+                <td style="font-weight:600;"><i class="fa-solid fa-circle-user" style="margin-right:8px;color:var(--grey-700);"></i>Nadia Haddad</td>
+                <td>nadia@refugeeaid.org</td>
+                <td><span class="tj2-badge tj2-badge-outline">Free</span></td>
+                <td><span style="font-size:12.5px;color:var(--grey-700);">&mdash;</span></td>
+                <td>
+                  <select class="sub-select">
+                    <option selected>No change</option>
+                    <option>Tarjimly Essentials</option>
+                    <option>Tarjimly Premium &mdash; $25/mo</option>
+                    <option>Tarjimly Sponsored &mdash; $10/mo</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="sub-select">
+                    <option selected>None</option>
+                    <option>Professional Interpreters</option>
+                  </select>
+                </td>
+                <td><span class="tj2-badge tj2-badge-pending">pending</span></td>
+                <td style="text-align:right;"><button type="button" class="tj2-btn tj2-btn-outline tj2-btn-sm"><i class="fa-solid fa-ellipsis"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+function tjToggleGroup(labelEl, listId) {
+  labelEl.classList.toggle('collapsed');
+  document.getElementById(listId).classList.toggle('collapsed');
+}
+</script>
+</body>
+</html>
