@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add Team Members · Refugee Aid NGO · Tarjimly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/tarjimly-v2-theme.css">
+<style>
+  .wiz-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 40px; max-width: 780px; }
+  .wiz-step .bar { height: 8px; border-radius: 999px; background: var(--grey-100); overflow: hidden; margin-bottom: 8px; }
+  .wiz-step .bar > span { display: block; height: 100%; background: var(--core-blue); }
+  .wiz-step p { margin: 0; font-size: 12.5px; font-weight: 700; color: var(--grey-700); }
+  .wiz-step.current p { color: var(--core-blue); }
+</style>
+</head>
+<body class="tj2">
+<div class="tj2-shell">
+
+  <div class="tj2-backdrop" id="tjBackdrop" onclick="tjCloseMenu()"></div>
+  <aside class="tj2-sidebar" id="tjSidebar">
+    <div class="tj2-sidebar-scroll">
+    <div class="tj2-org-chip">
+      <div class="mark"><i class="fa-solid fa-comment-dots"></i></div>
+      <div><div class="name">Refugee Aid NGO</div><div class="sub">Organization · Admin</div></div>
+    </div>
+    <div class="tj2-search"><i class="fa-solid fa-magnifying-glass"></i> Search… <kbd>⌘K</kbd></div>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-tarjimly')"><img src="assets/images/tarjimly-icon.svg" class="grp-icon" alt="">Tarjimly<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-tarjimly">
+      <li><a href="Text-Translations-Hybrid.html"><i class="fa-solid fa-language fa-fw"></i> Text translations</a></li>
+      <li><a href="Call-Interpreters-Hybrid.html"><i class="fa-solid fa-phone fa-fw"></i> Call interpreters</a></li>
+    </ul>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-twb')"><img src="assets/images/twb-mark.svg" class="grp-icon" alt="">TWB Platform<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-twb">
+      <li><a href="Dashboard-Home-Hybrid.html"><i class="fa-solid fa-house fa-fw"></i> Home</a></li>
+      <li><a href="Org-Projects-Hybrid.html"><i class="fa-solid fa-diagram-project fa-fw"></i> Projects <span class="count">4</span></a></li>
+      <li><a href="News-List-Hybrid.html"><i class="fa-solid fa-newspaper fa-fw"></i> News &amp; updates <span class="count">2</span></a></li>
+      <li><a href="#"><i class="fa-solid fa-graduation-cap fa-fw"></i> Learning center</a></li>
+    </ul>
+
+    <div class="tj2-nav-label" onclick="tjToggleGroup(this, 'nav-org')">Organization<i class="fa-solid fa-chevron-down chev"></i></div>
+    <ul class="tj2-nav" id="nav-org">
+      <li><a href="Organization-Hybrid.html"><i class="fa-solid fa-building fa-fw"></i> NGO Profile</a></li>
+      <li><a href="Billing-Hybrid.html"><i class="fa-solid fa-file-invoice-dollar fa-fw"></i> Billing</a></li>
+      <li><a href="Manage-Users-Hybrid.html" class="active"><i class="fa-solid fa-users fa-fw"></i> Manage users</a></li>
+    </ul>
+
+    </div>
+
+    <div class="tj2-sidebar-footer">
+      <div class="tj2-sidebar-footer-user">
+      <img class="tj2-avatar" src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&s=72" alt="">
+      <div><div class="name">Samira Al-Ahmad</div><div class="email">samira@refugeeaid.org</div></div>
+      </div>
+      <a href="Login-Hybrid.html" class="tj2-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+    </div>
+  </aside>
+
+  <div class="tj2-main">
+    <main class="tj2-content">
+
+      <button class="tj2-menu-btn" onclick="tjOpenMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+
+      <div class="tj2-breadcrumb">
+        <a href="Manage-Users-Hybrid.html">Manage Users</a>
+        <i class="fa-solid fa-chevron-right" style="font-size:9px;margin:0 4px;"></i>
+        <span style="color:var(--dark-mariam);font-weight:600;">Add New Team Members</span>
+      </div>
+
+      <div class="wiz-steps">
+        <div class="wiz-step current"><div class="bar"><span style="width:100%;"></span></div><p>Add New Team Members</p></div>
+        <div class="wiz-step"><div class="bar"><span style="width:0;"></span></div><p>Existing Accounts</p></div>
+        <div class="wiz-step"><div class="bar"><span style="width:0;"></span></div><p>New Accounts</p></div>
+        <div class="wiz-step"><div class="bar"><span style="width:0;"></span></div><p>Add Subscription</p></div>
+      </div>
+
+      <h1 class="tj2-h1" style="margin-bottom:6px;">Add team members</h1>
+      <p style="color:var(--grey-700);font-size:13.5px;margin:0 0 28px;">Input your team members' details below or upload a CSV.</p>
+
+      <h2 style="font-size:16px;font-weight:700;color:var(--core-blue);margin:0 0 16px;">Add emails manually</h2>
+      <label class="tj2-label" for="emails" style="max-width:520px;">Email addresses</label>
+      <input type="text" id="emails" class="tj2-input" style="max-width:520px;" placeholder="Input email addresses here" value="lena.wachira@refugeeaid.org, tom.becker@refugeeaid.org">
+      <p style="color:var(--grey-700);font-size:12.5px;margin-top:8px;max-width:520px;">Separate the email addresses using commas, e.g johndoe@email.com, janedoe@email.com</p>
+
+      <div style="display:flex;justify-content:flex-end;margin-top:32px;max-width:520px;">
+        <button type="button" class="tj2-btn tj2-btn-navy">Continue</button>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+function tjOpenMenu() {
+  document.getElementById('tjSidebar').classList.add('tj2-open');
+  document.getElementById('tjBackdrop').classList.add('tj2-open');
+}
+function tjCloseMenu() {
+  document.getElementById('tjSidebar').classList.remove('tj2-open');
+  document.getElementById('tjBackdrop').classList.remove('tj2-open');
+}
+function tjToggleGroup(labelEl, listId) {
+  labelEl.classList.toggle('collapsed');
+  document.getElementById(listId).classList.toggle('collapsed');
+}
+</script>
+</body>
+</html>
